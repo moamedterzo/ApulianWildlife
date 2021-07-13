@@ -1,0 +1,2253 @@
+@prefix : <http://localhost/apulian_fauna#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix ontology: <http://linkedevents.org/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+owl:topObjectProperty a owl:ReflexiveProperty, owl:SymmetricProperty, owl:TransitiveProperty .
+
+<http://localhost/apulian_fauna> a owl:Ontology .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:date a owl:AnnotationProperty .
+
+dc:description a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+skos:broader a owl:AnnotationProperty .
+
+skos:narrower a owl:AnnotationProperty .
+
+xsd:date a rdfs:Datatype .
+
+ontology:atPlace a owl:ObjectProperty .
+
+:Sighting a owl:Class .
+
+:Area a owl:Class .
+
+:subZoneOf a owl:ObjectProperty .
+
+ontology:atTime a owl:FunctionalProperty, owl:ObjectProperty .
+
+time:Istant a owl:Class .
+
+ontology:involved a owl:FunctionalProperty, owl:ObjectProperty .
+
+<http://www.wikidata.org/entity/Q729> a owl:Class .
+
+:eatAnimal a owl:ObjectProperty .
+
+:eatenByAnimal a owl:ObjectProperty .
+
+:hasHabitat a owl:ObjectProperty .
+
+<http://www.wikidata.org/entity/Q179049> a owl:Class .
+
+:Habitat a owl:Class .
+
+:hasStatus a owl:FunctionalProperty, owl:ObjectProperty .
+
+:Status a owl:Class .
+
+:mainProject a owl:ObjectProperty, owl:TransitiveProperty .
+
+:subProjectOf a owl:ObjectProperty, owl:TransitiveProperty .
+
+<http://localhost/apulian_fauna/ResearchProject> a owl:Class .
+
+:placeOfResearch a owl:ObjectProperty .
+
+:preferredHabitat a owl:ObjectProperty .
+
+:projectLeader a owl:InverseFunctionalProperty, owl:ObjectProperty .
+
+:workOnProject a owl:ObjectProperty .
+
+<http://www.wikidata.org/entity/Q1650915> a owl:Class .
+
+:SecondLevelArea a owl:Class .
+
+<http://www.wikidata.org/entity/Q15089> a owl:Class .
+
+:subjectOfResearch a owl:ObjectProperty .
+
+:workOnZone a owl:ObjectProperty .
+
+:curriculumDescription a owl:DatatypeProperty, owl:FunctionalProperty .
+
+:endYear a owl:DatatypeProperty, owl:FunctionalProperty .
+
+:numberOfSightings a owl:DatatypeProperty, owl:FunctionalProperty .
+
+:startYear a owl:DatatypeProperty, owl:FunctionalProperty .
+
+time:inXSDDate a owl:DatatypeProperty .
+
+ontology:Event a owl:Class .
+
+:ChiefResearcher a owl:Class .
+
+:Land a owl:Class .
+
+:MarineAnimal a owl:Class .
+
+:Water a owl:Class .
+
+:Predator a owl:Class .
+
+:SightingGroup a owl:Class .
+
+:AtRisk a :Status, owl:NamedIndividual .
+
+:Missing a :Status, owl:NamedIndividual .
+
+:Safe a :Status, owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q10811> a owl:Class .
+
+<http://www.wikidata.org/entity/Q25241> a owl:Class .
+
+<http://www.wikidata.org/entity/Q10850> a owl:Class .
+
+<http://www.wikidata.org/entity/Q7377> a owl:Class .
+
+<http://www.wikidata.org/entity/Q10908> a owl:Class .
+
+<http://www.wikidata.org/entity/Q152> a owl:Class .
+
+<http://www.wikidata.org/entity/Q15284> a owl:Class .
+
+<http://www.wikidata.org/entity/Q43806> a owl:Class .
+
+<http://www.wikidata.org/entity/Q5113> a owl:Class .
+
+:Andrea_Pisanelli a owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale
+  a <http://localhost/apulian_fauna/ResearchProject>, owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q382227> a :Area, :SecondLevelArea, owl:NamedIndividual,
+    <http://www.wikidata.org/entity/Q179049> .
+
+:Andrea_Scartazza a owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Barbara_Bertoli a :ChiefResearcher, owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro a <http://localhost/apulian_fauna/ResearchProject>,
+    owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q3895664> a :Area, :SecondLevelArea, owl:NamedIndividual,
+    <http://www.wikidata.org/entity/Q179049> .
+
+:Beach a :Habitat, :Land, owl:NamedIndividual .
+
+:Biodiversità_delle_specie_orticole_della_Puglia a <http://localhost/apulian_fauna/ResearchProject>,
+    owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q3936925> a :Area, :SecondLevelArea, owl:NamedIndividual,
+    <http://www.wikidata.org/entity/Q179049> .
+
+<http://www.wikidata.org/entity/Q25311> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+<http://www.wikidata.org/entity/Q262307> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+<http://www.wikidata.org/entity/Q27066> a :Predator, owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+<http://www.wikidata.org/entity/Q58697> a :Predator, owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+:Claudia_Mattioni a :ChiefResearcher, owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Clelia_Cirillo a owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Daniela_Di_Baccio a owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Fiorella_Villani a owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Forest a :Habitat, :Land, owl:NamedIndividual .
+
+:Francesca_Chiocchini a :ChiefResearcher, owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Freshwater a :Habitat, :Water, owl:NamedIndividual .
+
+:Giacomo_Assandri a owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Marco_Ciolfi a owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Marco_Lauteri a owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+:Murgia a :Habitat, :Land, owl:NamedIndividual .
+
+:Muriel_Virginie_Gaudet a :ChiefResearcher, owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+<http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia>
+  a <http://localhost/apulian_fauna/ResearchProject>, owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q680313> a :Area, :SecondLevelArea, owl:NamedIndividual,
+    <http://www.wikidata.org/entity/Q179049> .
+
+:Piero_Paris a owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+<http://www.wikidata.org/entity/Q15872> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q10811>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q213383> a :Predator, owl:NamedIndividual, <http://www.wikidata.org/entity/Q43806>,
+    <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q8331> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+:Progetto_tutela_biodiversità_dei_parchi_nazionali_pugliesi a <http://localhost/apulian_fauna/ResearchProject>,
+    owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q122069> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+<http://www.wikidata.org/entity/Q15879> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q10811>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q1675166> a :MarineAnimal, owl:NamedIndividual, <http://www.wikidata.org/entity/Q10908>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q188601> a :MarineAnimal, owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q5113>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q223044> a :MarineAnimal, owl:NamedIndividual, <http://www.wikidata.org/entity/Q10811>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q243727> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q10850>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+<http://www.wikidata.org/entity/Q25961> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q5113>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q26050> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q5113>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q539670> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q10850>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+<http://www.wikidata.org/entity/Q650143> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+<http://www.wikidata.org/entity/Q662672> a :Predator, owl:NamedIndividual, <http://www.wikidata.org/entity/Q10811>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q858243> a :Predator, owl:NamedIndividual, <http://www.wikidata.org/entity/Q10850>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+:Sighting_0 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q16124> a :Area, owl:NamedIndividual, <http://www.wikidata.org/entity/Q15089> .
+
+<http://www.wikidata.org/entity/Q3519> a :Area, owl:NamedIndividual, <http://www.wikidata.org/entity/Q15089> .
+
+:2018-03-23 a owl:NamedIndividual, time:Istant .
+
+:Sighting_1 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-12-11 a owl:NamedIndividual, time:Istant .
+
+:Sighting_10 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-02-17 a owl:NamedIndividual, time:Istant .
+
+:Sighting_11 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-08-31 a owl:NamedIndividual, time:Istant .
+
+:Sighting_12 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q13496> a :Area, owl:NamedIndividual, <http://www.wikidata.org/entity/Q15089> .
+
+:2018-07-18 a owl:NamedIndividual, time:Istant .
+
+:Sighting_13 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-10-24 a owl:NamedIndividual, time:Istant .
+
+:Sighting_14 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-02-09 a owl:NamedIndividual, time:Istant .
+
+:Sighting_15 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-10-26 a owl:NamedIndividual, time:Istant .
+
+:Sighting_16 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-08-07 a owl:NamedIndividual, time:Istant .
+
+:Sighting_17 a ontology:Event, :Sighting, :SightingGroup, owl:NamedIndividual .
+
+:2018-11-17 a owl:NamedIndividual, time:Istant .
+
+:Sighting_18 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-10-17 a owl:NamedIndividual, time:Istant .
+
+:Sighting_19 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-06-07 a owl:NamedIndividual, time:Istant .
+
+:Sighting_2 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-01-26 a owl:NamedIndividual, time:Istant .
+
+:Sighting_20 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-01-08 a owl:NamedIndividual, time:Istant .
+
+:Sighting_21 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-07-10 a owl:NamedIndividual, time:Istant .
+
+:Sighting_22 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-09-30 a owl:NamedIndividual, time:Istant .
+
+:Sighting_23 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-12-26 a owl:NamedIndividual, time:Istant .
+
+:Sighting_24 a ontology:Event, :Sighting, :SightingGroup, owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q13464> a :Area, owl:NamedIndividual, <http://www.wikidata.org/entity/Q15089> .
+
+:2018-03-08 a owl:NamedIndividual, time:Istant .
+
+:Sighting_25 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-04-15 a owl:NamedIndividual, time:Istant .
+
+:Sighting_26 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-08-14 a owl:NamedIndividual, time:Istant .
+
+:Sighting_27 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-01-17 a owl:NamedIndividual, time:Istant .
+
+:Sighting_28 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:Sighting_29 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-08-18 a owl:NamedIndividual, time:Istant .
+
+:Sighting_3 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-08-05 a owl:NamedIndividual, time:Istant .
+
+:Sighting_30 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-09-12 a owl:NamedIndividual, time:Istant .
+
+:Sighting_31 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-11-27 a owl:NamedIndividual, time:Istant .
+
+:Sighting_32 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-11-18 a owl:NamedIndividual, time:Istant .
+
+:Sighting_33 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-08-11 a owl:NamedIndividual, time:Istant .
+
+:Sighting_34 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-01-04 a owl:NamedIndividual, time:Istant .
+
+:Sighting_35 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-10-15 a owl:NamedIndividual, time:Istant .
+
+:Sighting_36 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-12-14 a owl:NamedIndividual, time:Istant .
+
+:Sighting_37 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-02-13 a owl:NamedIndividual, time:Istant .
+
+:Sighting_38 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:Sighting_39 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-09-08 a owl:NamedIndividual, time:Istant .
+
+:Sighting_4 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-11-10 a owl:NamedIndividual, time:Istant .
+
+:Sighting_40 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-04-08 a owl:NamedIndividual, time:Istant .
+
+:Sighting_41 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-09-17 a owl:NamedIndividual, time:Istant .
+
+:Sighting_42 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-07-13 a owl:NamedIndividual, time:Istant .
+
+:Sighting_43 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-08-03 a owl:NamedIndividual, time:Istant .
+
+:Sighting_44 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-02-28 a owl:NamedIndividual, time:Istant .
+
+:Sighting_45 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-03-02 a owl:NamedIndividual, time:Istant .
+
+:Sighting_46 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-07-07 a owl:NamedIndividual, time:Istant .
+
+:Sighting_47 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:Sighting_48 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-04-11 a owl:NamedIndividual, time:Istant .
+
+:Sighting_49 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-09-20 a owl:NamedIndividual, time:Istant .
+
+:Sighting_5 a ontology:Event, :Sighting, :SightingGroup, owl:NamedIndividual .
+
+:2018-12-20 a owl:NamedIndividual, time:Istant .
+
+:Sighting_50 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-09-19 a owl:NamedIndividual, time:Istant .
+
+:Sighting_51 a ontology:Event, :Sighting, :SightingGroup, owl:NamedIndividual .
+
+:2019-07-10 a owl:NamedIndividual, time:Istant .
+
+:Sighting_52 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-07-21 a owl:NamedIndividual, time:Istant .
+
+:Sighting_53 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-09-27 a owl:NamedIndividual, time:Istant .
+
+:Sighting_54 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-11-27 a owl:NamedIndividual, time:Istant .
+
+:Sighting_55 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-01-17 a owl:NamedIndividual, time:Istant .
+
+:Sighting_56 a ontology:Event, :Sighting, :SightingGroup, owl:NamedIndividual .
+
+:2019-06-25 a owl:NamedIndividual, time:Istant .
+
+:Sighting_57 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-11-17 a owl:NamedIndividual, time:Istant .
+
+:Sighting_58 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-08-28 a owl:NamedIndividual, time:Istant .
+
+:Sighting_59 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-12-16 a owl:NamedIndividual, time:Istant .
+
+:Sighting_6 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-09-27 a owl:NamedIndividual, time:Istant .
+
+:Sighting_60 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-01-05 a owl:NamedIndividual, time:Istant .
+
+:Sighting_61 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-04-29 a owl:NamedIndividual, time:Istant .
+
+:Sighting_62 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-04-19 a owl:NamedIndividual, time:Istant .
+
+:Sighting_63 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-03-21 a owl:NamedIndividual, time:Istant .
+
+:Sighting_64 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-06-19 a owl:NamedIndividual, time:Istant .
+
+:Sighting_65 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-02-22 a owl:NamedIndividual, time:Istant .
+
+:Sighting_66 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-04-07 a owl:NamedIndividual, time:Istant .
+
+:Sighting_67 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-06-29 a owl:NamedIndividual, time:Istant .
+
+:Sighting_68 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:Sighting_69 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-07-30 a owl:NamedIndividual, time:Istant .
+
+:Sighting_7 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-12-30 a owl:NamedIndividual, time:Istant .
+
+:Sighting_70 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-07-06 a owl:NamedIndividual, time:Istant .
+
+:Sighting_71 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-08-14 a owl:NamedIndividual, time:Istant .
+
+:Sighting_72 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-04-01 a owl:NamedIndividual, time:Istant .
+
+:Sighting_73 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-11-21 a owl:NamedIndividual, time:Istant .
+
+:Sighting_74 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-02-21 a owl:NamedIndividual, time:Istant .
+
+:Sighting_75 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-03-16 a owl:NamedIndividual, time:Istant .
+
+:Sighting_76 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-07-14 a owl:NamedIndividual, time:Istant .
+
+:Sighting_77 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-02-17 a owl:NamedIndividual, time:Istant .
+
+:Sighting_78 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-02-03 a owl:NamedIndividual, time:Istant .
+
+:Sighting_79 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-09-08 a owl:NamedIndividual, time:Istant .
+
+:Sighting_8 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-01-20 a owl:NamedIndividual, time:Istant .
+
+:Sighting_80 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-03-13 a owl:NamedIndividual, time:Istant .
+
+:Sighting_81 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-10-12 a owl:NamedIndividual, time:Istant .
+
+:Sighting_82 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-11-15 a owl:NamedIndividual, time:Istant .
+
+:Sighting_83 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-06-15 a owl:NamedIndividual, time:Istant .
+
+:Sighting_84 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-10-27 a owl:NamedIndividual, time:Istant .
+
+:Sighting_85 a ontology:Event, :Sighting, :SightingGroup, owl:NamedIndividual .
+
+:2019-04-22 a owl:NamedIndividual, time:Istant .
+
+:Sighting_86 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-06-22 a owl:NamedIndividual, time:Istant .
+
+:Sighting_87 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-08-17 a owl:NamedIndividual, time:Istant .
+
+:Sighting_88 a ontology:Event, :Sighting, :SightingGroup, owl:NamedIndividual .
+
+:2019-05-08 a owl:NamedIndividual, time:Istant .
+
+:Sighting_89 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-08-31 a owl:NamedIndividual, time:Istant .
+
+:Sighting_9 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2018-01-01 a owl:NamedIndividual, time:Istant .
+
+:Sighting_90 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:Sighting_91 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:Sighting_92 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-07-19 a owl:NamedIndividual, time:Istant .
+
+:Sighting_93 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-12-29 a owl:NamedIndividual, time:Istant .
+
+:Sighting_94 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-05-06 a owl:NamedIndividual, time:Istant .
+
+:Sighting_95 a ontology:Event, :Sighting, owl:NamedIndividual .
+
+:2019-03-17 a owl:NamedIndividual, time:Istant .
+
+:Silvia_Portarena a :ChiefResearcher, owl:NamedIndividual, <http://www.wikidata.org/entity/Q1650915> .
+
+<http://www.wikidata.org/entity/Q123991> a :Habitat, :Land, owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q13386> a :Area, owl:NamedIndividual, <http://www.wikidata.org/entity/Q15089> .
+
+<http://www.wikidata.org/entity/Q13498> a :Area, owl:NamedIndividual, <http://www.wikidata.org/entity/Q15089> .
+
+<http://www.wikidata.org/entity/Q165> a :Habitat, :Water, owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q166735> a :Habitat, :Land, owl:NamedIndividual .
+
+<http://www.wikidata.org/entity/Q18498> a :Predator, owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q729>, <http://www.wikidata.org/entity/Q7377> .
+
+<http://www.wikidata.org/entity/Q212552> a :MarineAnimal, owl:NamedIndividual, <http://www.wikidata.org/entity/Q152>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q217350> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q43806>,
+    <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q550195> a :MarineAnimal, owl:NamedIndividual, <http://www.wikidata.org/entity/Q152>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q618192> a owl:NamedIndividual, <http://www.wikidata.org/entity/Q10908>,
+    <http://www.wikidata.org/entity/Q25241>, <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q79915> a :MarineAnimal, owl:NamedIndividual, <http://www.wikidata.org/entity/Q25241>,
+    <http://www.wikidata.org/entity/Q5113>, <http://www.wikidata.org/entity/Q729> .
+
+:subZoneOf rdfs:domain :SecondLevelArea;
+  rdfs:range <http://www.wikidata.org/entity/Q15089>;
+  rdfs:subPropertyOf owl:topObjectProperty .
+
+:projectLeader rdfs:domain <http://www.wikidata.org/entity/Q1650915>;
+  rdfs:range <http://localhost/apulian_fauna/ResearchProject>;
+  rdfs:subPropertyOf :workOnProject .
+
+:Sighting rdfs:comment "The event of sighting represent the fact that different people have seen an animal at a particular place and in a particular time, for a number of times"@en;
+  rdfs:subClassOf ontology:Event .
+
+<http://www.wikidata.org/entity/Q179049> rdfs:subClassOf :SecondLevelArea .
+
+:SecondLevelArea rdfs:subClassOf :Area .
+
+<http://www.wikidata.org/entity/Q15089> rdfs:subClassOf :Area .
+
+:ChiefResearcher rdfs:subClassOf <http://www.wikidata.org/entity/Q1650915>;
+  owl:equivalentClass _:node5 .
+
+_:node5 a owl:Restriction;
+  owl:onClass <http://localhost/apulian_fauna/ResearchProject>;
+  owl:onProperty :projectLeader .
+
+:Land rdfs:subClassOf :Habitat .
+
+:MarineAnimal rdfs:subClassOf <http://www.wikidata.org/entity/Q729>;
+  owl:equivalentClass _:node6 .
+
+_:node6 a owl:Restriction;
+  owl:onClass :Water;
+  owl:onProperty :preferredHabitat .
+
+:Water rdfs:subClassOf :Habitat .
+
+:Predator rdfs:subClassOf <http://www.wikidata.org/entity/Q729>;
+  owl:equivalentClass _:node7 .
+
+_:node7 a owl:Restriction;
+  owl:onClass <http://www.wikidata.org/entity/Q729>;
+  owl:onProperty :eatAnimal .
+
+:SightingGroup rdfs:subClassOf :Sighting;
+  owl:equivalentClass _:node8 .
+
+_:node8 a owl:Restriction;
+  owl:onProperty :numberOfSightings;
+  owl:someValuesFrom _:node9 .
+
+_:node9 a rdfs:Datatype .
+
+<http://www.wikidata.org/entity/Q10811> rdfs:subClassOf <http://www.wikidata.org/entity/Q25241> .
+
+<http://www.wikidata.org/entity/Q25241> rdfs:subClassOf <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q10850> rdfs:subClassOf <http://www.wikidata.org/entity/Q7377> .
+
+<http://www.wikidata.org/entity/Q7377> rdfs:subClassOf <http://www.wikidata.org/entity/Q25241> .
+
+<http://www.wikidata.org/entity/Q10908> rdfs:subClassOf <http://www.wikidata.org/entity/Q25241> .
+
+<http://www.wikidata.org/entity/Q152> rdfs:subClassOf <http://www.wikidata.org/entity/Q25241> .
+
+<http://www.wikidata.org/entity/Q15284> rdfs:subClassOf :SecondLevelArea .
+
+<http://www.wikidata.org/entity/Q43806> rdfs:subClassOf <http://www.wikidata.org/entity/Q729> .
+
+<http://www.wikidata.org/entity/Q5113> rdfs:subClassOf <http://www.wikidata.org/entity/Q25241> .
+
+ontology:atPlace rdfs:comment "It indicates where the sighting has taken place"@en;
+  rdfs:domain :Sighting;
+  rdfs:range :Area;
+  owl:propertyChainAxiom _:node1 .
+
+_:node1 rdf:first ontology:atPlace;
+  rdf:rest _:node2 .
+
+_:node2 rdf:first :subZoneOf;
+  rdf:rest rdf:nil .
+
+ontology:atTime rdfs:comment "It indicates the time when the sighting has occourred"@en;
+  rdfs:domain :Sighting;
+  rdfs:range time:Istant .
+
+ontology:involved rdfs:comment "It indicates the object of the sighting"@en;
+  rdfs:domain :Sighting;
+  rdfs:range <http://www.wikidata.org/entity/Q729> .
+
+:eatAnimal rdfs:comment "It indicates the fact that an animals eats another animal"@en;
+  rdfs:domain <http://www.wikidata.org/entity/Q729>;
+  rdfs:range <http://www.wikidata.org/entity/Q729>;
+  owl:inverseOf :eatenByAnimal .
+
+:eatenByAnimal rdfs:comment "It indicates the fact that an animals has been eaten by another animal"@en;
+  rdfs:domain <http://www.wikidata.org/entity/Q729>;
+  rdfs:range <http://www.wikidata.org/entity/Q729> .
+
+:hasHabitat rdfs:comment "Every protected area has one or plus habitats"@en;
+  rdfs:domain <http://www.wikidata.org/entity/Q179049>;
+  rdfs:range :Habitat .
+
+:hasStatus rdfs:comment "It indicates the status of preservation of one animal"@en;
+  rdfs:domain <http://www.wikidata.org/entity/Q729>;
+  rdfs:range :Status .
+
+:mainProject rdfs:comment "It indicates the main project, which has several subprojects"@en;
+  rdfs:domain <http://localhost/apulian_fauna/ResearchProject>;
+  rdfs:range <http://localhost/apulian_fauna/ResearchProject>;
+  owl:inverseOf :subProjectOf .
+
+:subProjectOf rdfs:comment "It indicates the fact that a project is a subproject of another one"@en;
+  rdfs:domain <http://localhost/apulian_fauna/ResearchProject>;
+  rdfs:range <http://localhost/apulian_fauna/ResearchProject> .
+
+:placeOfResearch rdfs:comment "A research project can have one or more areas of study"@en;
+  rdfs:domain <http://localhost/apulian_fauna/ResearchProject>;
+  rdfs:range <http://www.wikidata.org/entity/Q179049> .
+
+:preferredHabitat rdfs:comment "An animal has one or more habitat for which it is more suited"@en;
+  rdfs:domain <http://www.wikidata.org/entity/Q729>;
+  rdfs:range :Habitat .
+
+:workOnProject rdfs:comment "A researcher works on a project"@en;
+  rdfs:domain <http://www.wikidata.org/entity/Q1650915>;
+  rdfs:range <http://localhost/apulian_fauna/ResearchProject> .
+
+:subjectOfResearch rdfs:comment "A research project can have one or more animal to study"@en;
+  rdfs:domain <http://localhost/apulian_fauna/ResearchProject>;
+  rdfs:range <http://www.wikidata.org/entity/Q729> .
+
+:workOnZone rdfs:comment "A researcher, working on a project, can care about different areas"@en;
+  rdfs:domain <http://www.wikidata.org/entity/Q1650915>;
+  rdfs:range <http://www.wikidata.org/entity/Q179049>;
+  owl:propertyChainAxiom _:node3 .
+
+_:node3 rdf:first :workOnProject;
+  rdf:rest _:node4 .
+
+_:node4 rdf:first :placeOfResearch;
+  rdf:rest rdf:nil .
+
+:curriculumDescription rdfs:comment "Description of the curriculum of the researcher"@en;
+  rdfs:domain <http://www.wikidata.org/entity/Q1650915>;
+  rdfs:range rdf:PlainLiteral .
+
+:endYear rdfs:comment "Ending year of a research project"@en;
+  rdfs:domain <http://localhost/apulian_fauna/ResearchProject>;
+  rdfs:range xsd:integer .
+
+:numberOfSightings rdfs:comment "Number of animals involved in a sighting"@en;
+  rdfs:domain :Sighting;
+  rdfs:range xsd:integer .
+
+:startYear rdfs:comment "Starting year of a research project"@en;
+  rdfs:domain <http://localhost/apulian_fauna/ResearchProject>;
+  rdfs:range xsd:integer .
+
+time:inXSDDate rdfs:comment "Position of an instant, expressed using xsd:date"@en;
+  rdfs:domain time:Istant;
+  rdfs:range xsd:date .
+
+:Status rdfs:comment "Population status of an animal"@en;
+  rdfs:label "Status"@en;
+  owl:equivalentClass _:node12 .
+
+_:node12 a owl:Class;
+  owl:oneOf _:node13 .
+
+_:node13 rdf:first :AtRisk;
+  rdf:rest _:node14 .
+
+_:node14 rdf:first :Missing;
+  rdf:rest _:node15 .
+
+_:node15 rdf:first :Safe;
+  rdf:rest rdf:nil .
+
+:Area rdfs:comment "Territorial entity of which the borders are determined by human features"@en;
+  rdfs:label "Area"@en .
+
+:subZoneOf rdfs:comment "A zone of second order level belongs to one of higher order"@en;
+  rdfs:label "sub zone of"@en .
+
+time:Istant rdfs:comment "It represents a particular istant in time, so it has a date and a time"@en;
+  rdfs:label "Istant"@en .
+
+<http://www.wikidata.org/entity/Q729> rdfs:comment "Animals are multicellular eukaryotic organisms that form the biological kingdom Animalia. With few exceptions, animals consume organic material, breathe oxygen, are able to move, can reproduce sexually, and grow from a hollow sphere of cells, the blastula, during embryonic development."@en;
+  rdfs:label "Animal"@en .
+
+<http://www.wikidata.org/entity/Q179049> rdfs:comment "Protected areas or conservation areas are locations which receive protection because of their recognized natural, ecological or cultural values. The term \"protected area\" also includes marine protected areas. Protected areas are essential for biodiversity conservation, often providing habitat and protection from hunting for threatened and endangered species. Protection helps maintain ecological processes that cannot survive in most intensely managed landscapes and seascapes."@en;
+  rdfs:label "ProtectedArea"@en .
+
+:Habitat rdfs:comment "A habitat is the type of natural environment in which a particular species of organism lives. It is characterized by both physical and biological features. A species' habitat is those places where it can find food, shelter, protection and mates for reproduction."@en;
+  rdfs:label "Habitat"@en .
+
+<http://localhost/apulian_fauna/ResearchProject> rdfs:comment "Activities that aims to increase the stock of knowledge, including knowledge of humans, culture and society, and the use of this stock of knowledge to devise new applications."@en;
+  rdfs:label "ResearchProject"@en .
+
+:projectLeader rdfs:comment "A researcher can be the leader of a project"@en;
+  rdfs:label "project leader"@en .
+
+<http://www.wikidata.org/entity/Q1650915> rdfs:comment "Someone who work in a reasarch project."@en;
+  rdfs:label "Researcher"@en .
+
+:SecondLevelArea rdfs:comment "It is a subdivision of the territory, based on giuridic laws."@en;
+  rdfs:label "SecondLevelArea"@en .
+
+<http://www.wikidata.org/entity/Q15089> rdfs:comment "Is an administrative division within a country or state"@en;
+  rdfs:label "Province"@en .
+
+ontology:Event rdfs:comment "It represents the event that happens in a place, at given time, and it is about a subject and an object"@en;
+  rdfs:label "Event"@en .
+
+:ChiefResearcher rdfs:comment "A researcher leading a research project"@en;
+  rdfs:label "ChiefResearcher"@en .
+
+:Land rdfs:comment "A habitat of type land, has most of its components on a solid surface."@en;
+  rdfs:label "Land"@en .
+
+:MarineAnimal rdfs:comment "Are animals that live in the salt water of the sea or ocean, or the brackish water of coastal estuaries."@en;
+  rdfs:label "MarineAnimal"@en .
+
+:Water rdfs:comment "A habitat of type water, has its components on water."@en;
+  rdfs:label "Water"@en .
+
+:Predator rdfs:comment "Are organism that kills and eats another organism, its prey."@en;
+  rdfs:label "Predator"@en .
+
+:SightingGroup rdfs:comment "It represents multiple sightings, that makes the appearance of an animal more significant"@en;
+  rdfs:label "SightingGroup"@en .
+
+:AtRisk rdfs:comment "It denotes the risk of the animal to be missing in the next period of time."@en;
+  rdfs:label "At Risk"@en .
+
+:Missing rdfs:comment "It denotes the fact that an animal is not present in the territory."@en;
+  rdfs:label "Missing"@en .
+
+:Safe rdfs:comment "It indicates the fact that an animal lives without the problem to be missing in the next period of time."@en;
+  rdfs:label "Safe"@en .
+
+<http://www.wikidata.org/entity/Q10811> rdfs:comment "Reptiles are tetrapod animals in the class Reptilia, comprising today's turtles, crocodilians, snakes, amphisbaenians, lizards, tuatara, and their extinct relatives."@en;
+  rdfs:label "Reptiles"@en .
+
+<http://www.wikidata.org/entity/Q25241> rdfs:comment "Comprise all species of animals within the subphylum Vertebrata. The defining characteristic of a vertebrate is the vertebral column, in which the notochord (a stiff rod of uniform composition) found in all chordates has been replaced by a segmented series of stiffer elements (vertebrae) separated by mobile joints."@en;
+  rdfs:label "Vertebrate"@en .
+
+<http://www.wikidata.org/entity/Q10850> rdfs:comment "Rodents (from Latin Rodere, \"to gnaw\") are mammals of the order Rodentia, which are characterized by a single pair of continuously growing incisors in each of the upper and lower jaws."@en;
+  rdfs:label "Rodent"@en .
+
+<http://www.wikidata.org/entity/Q7377> rdfs:comment "Mammals (from Latin mamma \"breast\") are vertebrate animals constituting the class Mammalia (/məˈmeɪliə/), and characterized by the presence of mammary glands which in females (and sometimes males[1]) produce milk for feeding (nursing) their young, a neocortex (a region of the brain), fur or hair, and three middle ear bones. These characteristics distinguish them from reptiles and birds, from which they diverged in the late Triassic, 201–227 million years ago."@en;
+  rdfs:label "Mammal"@en .
+
+<http://www.wikidata.org/entity/Q10908> rdfs:comment "Amphibians are ectothermic, tetrapod vertebrates of the class Amphibia"@en;
+  rdfs:label "Amphibia"@en .
+
+<http://www.wikidata.org/entity/Q152> rdfs:comment "Fish are gill-bearing aquatic craniate animals that lack limbs with digits."@en;
+  rdfs:label "Fish"@en .
+
+<http://www.wikidata.org/entity/Q15284> rdfs:comment "The municipality represents the finest territorial entity"@en;
+  rdfs:label "Municipality"@en .
+
+<http://www.wikidata.org/entity/Q43806> rdfs:comment "Invertebrates are animals that neither possess nor develop a vertebral column (commonly known as a backbone or spine), derived from the notochord."@en;
+  rdfs:label "Invertebrate"@en .
+
+<http://www.wikidata.org/entity/Q5113> rdfs:comment "Birds are a group of endothermic vertebrates constituting the class Aves, characterized by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton."@en;
+  rdfs:label "Bird"@en .
+
+<http://www.wikidata.org/entity/Q382227> rdfs:comment "The Gargano National Park (Italian: Parco nazionale del Gargano) is a national park in the province of Foggia, southern Italy. Aside from the Mount Gargano promontory from which it takes its name, it includes also the Tremiti Islands archipelago and the Foresta Umbra, a large wood protected area established in 1977."@en;
+  rdfs:label "Gargano National Park"@en .
+
+<http://www.wikidata.org/entity/Q3895664> rdfs:comment "The Lama Balice Regional Nature Park is a 504-hectare protected natural area that was established by the Puglia Region under the regional law No 15/2007 located in the metropolitan city of Bari."@en;
+  rdfs:label "Regional natural park of Lama Balice"@en .
+
+:Beach rdfs:comment "A beach is a landform alongside a body of water which consists of loose particles. The particles composing a beach are typically made from rock, such as sand, gravel, shingle, pebbles."@en;
+  rdfs:label "Beach"@en .
+
+<http://www.wikidata.org/entity/Q3936925> rdfs:comment "The Torre Guaceto State Nature Reserve is a state nature reserve located on the Adriatic coast of high Salento, a few kilometers from the centers of Carovigno and San Vito dei Normanni and 17 km from Brindisi."@en;
+  rdfs:label "Protected marine area of Torre Guaceto"@en .
+
+<http://www.wikidata.org/entity/Q25311> rdfs:comment "Mustela nivalis is the smallest member of the genus Mustela, family Mustelidae and order Carnivora. It is native to Eurasia, North America and North Africa."@en;
+  rdfs:label "Mustela nivalis"@en .
+
+<http://www.wikidata.org/entity/Q262307> rdfs:comment "The crested porcupine (Hystrix cristata) also known as the African crested porcupine, is a species of rodent in the family Hystricidae[2] found in Italy, North Africa, and sub-Saharan Africa."@en;
+  rdfs:label "Crested porcupine"@en .
+
+<http://www.wikidata.org/entity/Q27066> rdfs:comment "The European badger is a powerfully built black, white, brown and grey animal with a small head, a stocky body, small black eyes and short tail."@en;
+  rdfs:label "European badger"@en .
+
+<http://www.wikidata.org/entity/Q58697> rdfs:comment "Is a suid native to much of Eurasia, North Africa, and the Greater Sunda Islands. Human intervention has spread its distribution further, making the species one of the widest-ranging mammals in the world, as well as the most widely spread suiform. Its wide range, high numbers, and adaptability mean that it is classed as least concern by the IUCNand it has become an invasive species in part of its introduced range. The animal probably originated in Southeast Asia during the Early Pleistocene, and outcompeted other suid species as it spread throughout the Old World."@en;
+  rdfs:label "Sus scrofa"@en .
+
+:Forest rdfs:comment "A large area covered by trees."@en;
+  rdfs:label "Forest"@en .
+
+:Freshwater rdfs:comment "It is any naturally occurring water except seawater and brackish water. Fresh water includes water in ice sheets, ice caps, glaciers, icebergs, bogs, ponds, lakes, rivers, streams, and even underground water called groundwater. Fresh water is generally characterized by having low concentrations of dissolved salts and other total dissolved solids."@en;
+  rdfs:label "Freshwater"@en .
+
+:Murgia rdfs:comment "It is a karst topographic plateau of rectangular shape in southern Italy. Most of it lies within Apulia and corresponds with the sub-region known as Murgia or Le Murge. The plateau lies mainly in the Metropolitan City of Bari and the province of Barletta-Andria-Trani, but extends into the provinces of Brindisi and Taranto to the south; and into Matera in Basilicata to the west."@en;
+  rdfs:label "Murgia"@en .
+
+<http://www.wikidata.org/entity/Q680313> rdfs:comment "The Parco Nazionale dell'Alta Murgia is a national park in Apulia, southern Italy, established in 2004. It lies in the Murgia geographical area, with its headquarters in the town of Gravina in Puglia, and has an area of 677.39  square kilometres."@en;
+  rdfs:label "Alta Murgia National Park"@en .
+
+<http://www.wikidata.org/entity/Q15872> rdfs:comment "They are small reptiles, most of these in temperate countries are gray or beige in color, spotted so finely as to resemble rubber. Many species can change color to blend in or for other purposes, adapting for example to the surrounding environment. Other species, characteristic of warm countries, may have bright colors, especially those with mainly diurnal habits. Geckos are the only reptiles in temperate countries with voices, that is, they emit a verse, which is not a hiss."@en;
+  rdfs:label "Geco"@en .
+
+<http://www.wikidata.org/entity/Q213383> rdfs:comment "The tarantula is an invertebrate that relies on an exoskeleton for muscular support. Like other Arachnida, a tarantula’s body comprises two main parts, the prosoma (or cephalothorax) and the opisthosoma (or abdomen). The prosoma and opisthosoma are connected by the pedicel, or pregenital somite. This waist-like connecting piece is actually part of the prosoma and gives the opisthosoma a wide range of motion relative to the prosoma."@en;
+  rdfs:label "Theraphosidae"@en .
+
+<http://www.wikidata.org/entity/Q8331> rdfs:comment """The fox is a medium-sized canine, has a long and tapered muzzle, straight, pointed and black ears in the back and short legs. Its appearance is pleasant, its thick fur is long, the soft tail and the color of the hair can change with the seasons.
+It is a nocturnal animal, but it also lives undisturbed during the day, sheltering under the bushes, in small ditches, in the burrows dug by itself or in abandoned badgers or porcupines' dens."""@en;
+  rdfs:label "Fox"@en .
+
+<http://www.wikidata.org/entity/Q122069> rdfs:comment "Is a species of deer. The male of the species is sometimes referred to as a roebuck. The roe deer is relatively small, reddish and grey-brown, and well-adapted to cold environments. The species is widespread in Europe, from the Mediterranean to Scandinavia, from Scotland to the Caucasus, and east to northern Iran and Iraq. It is distinct from the somewhat larger Siberian roe deer."@en;
+  rdfs:label "Roe deer"@en .
+
+<http://www.wikidata.org/entity/Q15879> rdfs:comment "Are squamate reptiles ranging across all continents except Antarctica, as well as most oceanic island chains. The group is paraphyletic as it excludes the snakes and Amphisbaenia; some lizards are more closely related to these two excluded groups than they are to other lizards."@en;
+  rdfs:label "Lizard"@en .
+
+<http://www.wikidata.org/entity/Q1675166> rdfs:comment "The Italian newt (Lissotriton italicus) is a species of salamander in the family Salamandridae found only in Italy. Its natural habitats are temperate forests, temperate shrubland, Mediterranean-type shrubby vegetation, freshwater lakes, intermittent freshwater lakes, freshwater marshes, intermittent freshwater marshes, arable land, pastureland, rural gardens, water storage areas, ponds, and canals and ditches. It is threatened by habitat loss. It was formerly known as Triturus italicus, but was relocated to the genus Lissotriton after Triturus was split."@en;
+  rdfs:label "Italian newt"@en .
+
+<http://www.wikidata.org/entity/Q188601> rdfs:comment "They live in central Europe forests and are more common in hilly areas. They prefer deciduous forests since they like to hide in fallen leaves and around mossy tree trunks. They need small brooks or ponds with clean water in their habitat for the development of the larvae. Whether on land or in water, fire salamanders are inconspicuous. They spend much of their time hidden under wood or other objects. They are active in the evening and the night, but on rainy days they are active in the daytime as well"@en;
+  rdfs:label "Little bustard"@en .
+
+<http://www.wikidata.org/entity/Q223044> rdfs:comment "Turtles are reptiles of the order Testudines characterized by a special bony or cartilaginous shell developed from their ribs and acting as a shield."@en;
+  rdfs:label "Turtle"@en .
+
+<http://www.wikidata.org/entity/Q243727> rdfs:comment "Is a European rodent"@en;
+  rdfs:label "Country mouse"@en .
+
+<http://www.wikidata.org/entity/Q25961> rdfs:comment "Is a passerine bird in the lark family Alaudidae. It is a widespread species found across Europe and Asia with introduced populations in New Zealand, Australia and on the Hawaiian Islands. It is a bird of open farmland and heath, known for the song of the male, which is delivered in hovering flight from heights of 50 to 100 metres (160 to 330 ft). The sexes are alike. It is streaked greyish-brown above and on the breast and has a buff-white belly."@en;
+  rdfs:label "Skylark"@en .
+
+<http://www.wikidata.org/entity/Q26050> rdfs:comment "They are medium-sized birds (total length between 11.5 and 33 cm); the beak, robust and slightly curved, sometimes equipped with a small hook, has at the base only small and scarce seals. The legs are coated with plates that do not form shields, and are usually more robust and long than those of related species, in relation to the fact that their life takes place on the ground and not on trees."@en;
+  rdfs:label "Thrush"@en .
+
+<http://www.wikidata.org/entity/Q539670> rdfs:comment """The European water vole or northern water vole (Arvicola amphibius, included in synonymy: A. terrestris), is a semi-aquatic rodent. It is often informally called the water rat, though it only superficially resembles a true rat.[3] Water voles have rounder noses than rats, deep brown fur, chubby faces and short fuzzy ears; unlike rats their tails, paws and ears are covered with hair.
+In the wild, on average, water voles only live about five months. Maximum longevity in captivity is two and a half years."""@en;
+  rdfs:label "Arvicola"@en .
+
+<http://www.wikidata.org/entity/Q650143> rdfs:comment "Talpa is a genus in the mole family Talpidae. Among the first taxa in science, Carolus Linnaeus used the Latin word for \"moles\", talpa, in his Regnum Animale to refer to the commonly known European form of mole."@en;
+  rdfs:label "Talpa"@en .
+
+<http://www.wikidata.org/entity/Q662672> rdfs:comment "Vipera is a genus of venomous vipers. It has a very wide range, being found from North Africa to just within the Arctic Circle and from Great Britain to Pacific Asia."@en;
+  rdfs:label "Vipera"@en .
+
+<http://www.wikidata.org/entity/Q858243> rdfs:comment "Are members of the family Sciuridae, a family that includes small or medium-size rodents. The squirrel family includes tree squirrels, ground squirrels, chipmunks, marmots (including groundhogs), flying squirrels, and prairie dogs amongst other rodents."@en;
+  rdfs:label "Squirrel"@en .
+
+<http://www.wikidata.org/entity/Q123991> rdfs:comment "It is an ecoregion, in the montane grasslands and shrublands and temperate grasslands, savannas and shrublands biomes, characterized by grassland plains without trees apart from those near rivers and lakes."@en;
+  rdfs:label "Steppe"@en .
+
+<http://www.wikidata.org/entity/Q165> rdfs:comment "Large body of saline water"@en;
+  rdfs:label "Sea"@en .
+
+<http://www.wikidata.org/entity/Q166735> rdfs:comment "A swamp is a wetland that is forested. Swamps are considered to be transition zones because both land and water play a role in creating this environment."@en;
+  rdfs:label "Swamp"@en .
+
+<http://www.wikidata.org/entity/Q18498> rdfs:comment "Is a canine native to the wilderness and remote areas of Eurasia and North America. It is the largest extant member of its familyThe wolf is the most specialized member of the genus Canis for cooperative big game hunting, as demonstrated by its physical adaptations to tackling large prey, its more social nature, and its highly advanced expressive behaviour."@en;
+  rdfs:label "Wolf"@en .
+
+<http://www.wikidata.org/entity/Q212552> rdfs:comment "The European conger (Conger conger) is a species of conger of the family Congridae. It is the largest eel in the world and native to the northeast Atlantic, including the Mediterranean Sea."@en;
+  rdfs:label "European conger"@en .
+
+<http://www.wikidata.org/entity/Q217350> rdfs:comment "The wheat weevil (Sitophilus granarius), also known as the grain weevil or granary weevil, occurs all over the world and is a common pest in many places. It can cause significant damage to harvested stored grains and may drastically decrease crop yields. The females lay many eggs and the larvae eat the inside of the grain kernels."@en;
+  rdfs:label "Wheat weevil"@en .
+
+<http://www.wikidata.org/entity/Q550195> rdfs:comment "The grouper (Epinephelus aeneus) is a species of grouper living in the subtropical eastern Atlantic Ocean and the southern Mediterranean Sea. It can reach a maximum length of 120 cm and a maximum weight of 25 kg."@en;
+  rdfs:label "Grouper"@en .
+
+<http://www.wikidata.org/entity/Q618192> rdfs:comment "The Apennine yellow-bellied toad (Bombina pachypus) is a species of toad in the family Bombinatoridae endemic to Italy. Its natural habitats are temperate forests, temperate grassland, swamps, freshwater marshes, intermittent freshwater marshes, arable land, pastureland, ponds, open excavations, irrigated land, and seasonally flooded agricultural land. It is threatened by habitat loss."@en;
+  rdfs:label "Appenine yellow-bellied toad"@en .
+
+<http://www.wikidata.org/entity/Q79915> rdfs:comment "The common kingfisher (Alcedo atthis) also known as the Eurasian kingfisher, and river kingfisher, is a small kingfisher with seven subspecies recognized within its wide distribution across Eurasia and North Africa. It is resident in much of its range, but migrates from areas where rivers freeze in winter."@en;
+  rdfs:label "Common kingfisher"@en .
+
+<http://localhost/apulian_fauna> dc:creator "Racanati Amedeo", "Sansonetti Angelo Pio";
+  dc:date "24/01/2020";
+  dc:description "L'ontologia modella la fauna pugliese e la registrazione della presenza di ogni animale che ne fa parte. Inotre permette di definire gli habitat del territorio e i progetti di ricerca attivi, al fine di monitorare lo status di conservazione degli animali nelle varie aree geografiche."@it,
+    "The ontology models the Apulian fauna and the recording of the presence of each animal that belongs to it. Furthermore, it allows to define the habitats of the territory and the active research projects, in order to monitor the status of conservation  of animals in the various geographical areas."@en;
+  dc:title "Apulian wildlife"@en, "Fauna pugliese"@it;
+  vann:preferredNamespacePrefix "apuw";
+  vann:preferredNamespaceUri "http://localhost/apulian_fauna";
+  rdfs:label "ApulianWildlife"@en, "FaunaPugliese"@it .
+
+ontology:atPlace rdfs:label "at place"@en .
+
+:Sighting rdfs:label "Sighting"@en .
+
+ontology:atTime rdfs:label "at time"@en .
+
+ontology:involved rdfs:label "involved"@en .
+
+:eatAnimal rdfs:label "eat animal"@en .
+
+:eatenByAnimal rdfs:label "eaten by animal"@en .
+
+:hasHabitat rdfs:label "has habitat"@en .
+
+:hasStatus rdfs:label "has status"@en .
+
+:mainProject rdfs:label "main project"@en .
+
+:subProjectOf rdfs:label "sub project of"@en .
+
+:placeOfResearch rdfs:label "place of research"@en .
+
+:preferredHabitat rdfs:label "preferred habitat"@en .
+
+:workOnProject rdfs:label "work on project"@en .
+
+:subjectOfResearch rdfs:label "subject of research"@en .
+
+:workOnZone rdfs:label "work on zone"@en .
+
+:curriculumDescription rdfs:label "curriculum description"@en .
+
+:endYear rdfs:label "end year"@en .
+
+:numberOfSightings rdfs:label "number of sightings"@en .
+
+:startYear rdfs:label "start year"@en .
+
+:Andrea_Pisanelli rdfs:label "Andrea Pisanelli"@it .
+
+:Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale
+  rdfs:label "Progetto tutela biodiversità del Parco Nazionale del Gargano"@it, "Project of protection of biodiversity for the Gargano National Park"@en .
+
+:Andrea_Scartazza rdfs:label "Andrea Scartazza"@it .
+
+:Barbara_Bertoli rdfs:label "Barbara Bertoli"@it .
+
+:Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro rdfs:label "Multifunctional ecological corridor project of the Lama Balice regional natural park"@en,
+    "Progetto di Corridoio Ecologico multifunzionale del parco naturale regionale Lama Balice"@it .
+
+:Biodiversità_delle_specie_orticole_della_Puglia rdfs:label "Biodiversity for the species of the Torre Guaceto's marine protected area"@en,
+    "Biodiversità delle specie nell'area Marina Protetta di Torre Guaceto"@it .
+
+:Claudia_Mattioni rdfs:label "Claudia Mattioni"@it .
+
+:Clelia_Cirillo rdfs:label "Clelia Cirillo"@it .
+
+:Daniela_Di_Baccio rdfs:label "Daniela Di Baccio"@it .
+
+:Fiorella_Villani rdfs:label "Fiorella Villani"@it .
+
+:Francesca_Chiocchini rdfs:label "Francesca Chiocchini"@it .
+
+:Giacomo_Assandri rdfs:label "Giacomo Assandri"@it .
+
+:Marco_Ciolfi rdfs:label "Marco Ciolfi"@it .
+
+:Marco_Lauteri rdfs:label "Marco Lauteri"@it .
+
+:Muriel_Virginie_Gaudet rdfs:label "Muriel Virginie Gaudet"@it .
+
+<http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia>
+  rdfs:label "Progetto tutela biodiversità del Parco Nazionale dell’Alta Murgia"@it,
+    "Project of protection of biodiversity for the Alta Murgia National Park"@en .
+
+:Piero_Paris rdfs:label "Piero Paris"@it .
+
+:Progetto_tutela_biodiversità_dei_parchi_nazionali_pugliesi rdfs:label "Progetto tutela biodiversità dei parchi nazionali pugliesi"@it,
+    "Project of protection of biodiversity for the Apulian national parks"@en .
+
+<http://www.wikidata.org/entity/Q16124> rdfs:label "Barletta-Andria-Trani"@en .
+
+<http://www.wikidata.org/entity/Q3519> rdfs:label "Bari"@en .
+
+<http://www.wikidata.org/entity/Q13496> rdfs:label "Brindisi"@en .
+
+<http://www.wikidata.org/entity/Q13464> rdfs:label "Foggia"@en .
+
+:Silvia_Portarena rdfs:label "Silvia Portarena"@it .
+
+<http://www.wikidata.org/entity/Q13386> rdfs:label "Lecce"@en .
+
+<http://www.wikidata.org/entity/Q13498> rdfs:label "Taranto"@en .
+
+:Area skos:broader <http://www.wikidata.org/entity/Q15642541> .
+
+:ChiefResearcher skos:broader <http://www.wikidata.org/entity/Q1251441> .
+
+:Habitat skos:narrower <http://www.wikidata.org/entity/Q52105> .
+
+:Status skos:narrower <http://www.wikidata.org/entity/Q82673> .
+
+<http://localhost/apulian_fauna/ResearchProject> skos:narrower <http://www.wikidata.org/entity/Q3922738> .
+
+:Beach skos:narrower "http://www.wikidata.org/entity/Q40080" .
+
+:Forest skos:narrower <http://www.wikidata.org/entity/Q4421> .
+
+:Murgia skos:narrower <http://www.wikidata.org/entity/Q1051664> .
+
+:Sighting_0 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_1 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_10 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_11 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_12 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_13 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_14 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_15 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_16 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_17 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_18 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_19 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_2 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_20 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_21 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_22 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_23 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_24 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_25 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_26 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_27 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_28 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_29 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_3 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_30 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_31 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_32 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_33 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_34 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_35 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_36 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_37 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_38 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_39 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_4 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_40 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_41 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_42 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_43 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_44 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_45 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_46 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_47 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_48 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_49 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_5 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_50 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_51 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_52 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_53 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_54 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_55 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_56 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_57 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_58 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_59 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_6 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_60 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_61 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_62 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_63 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_64 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_65 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_66 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_67 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_68 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_69 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_7 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_70 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_71 ontology:atPlace <http://www.wikidata.org/entity/Q13496>, <http://www.wikidata.org/entity/Q3936925> .
+
+:Sighting_72 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_73 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_74 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_75 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_76 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_77 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_78 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_79 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_8 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_80 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_81 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_82 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_83 ontology:atPlace <http://www.wikidata.org/entity/Q13464>, <http://www.wikidata.org/entity/Q382227> .
+
+:Sighting_84 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_85 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_86 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_87 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_88 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_89 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_9 ontology:atPlace <http://www.wikidata.org/entity/Q16124>, <http://www.wikidata.org/entity/Q3519>,
+    <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_90 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_91 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_92 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_93 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_94 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+:Sighting_95 ontology:atPlace <http://www.wikidata.org/entity/Q3519>, <http://www.wikidata.org/entity/Q3895664> .
+
+<http://www.wikidata.org/entity/Q382227> :subZoneOf <http://www.wikidata.org/entity/Q13464> .
+
+<http://www.wikidata.org/entity/Q3895664> :subZoneOf <http://www.wikidata.org/entity/Q3519> .
+
+<http://www.wikidata.org/entity/Q3936925> :subZoneOf <http://www.wikidata.org/entity/Q13496> .
+
+<http://www.wikidata.org/entity/Q680313> :subZoneOf <http://www.wikidata.org/entity/Q16124>,
+    <http://www.wikidata.org/entity/Q3519> .
+
+:Sighting_0 ontology:atTime :2018-03-23 .
+
+:Sighting_1 ontology:atTime :2018-12-11 .
+
+:Sighting_10 ontology:atTime :2018-02-17 .
+
+:Sighting_11 ontology:atTime :2018-08-31 .
+
+:Sighting_12 ontology:atTime :2018-07-18 .
+
+:Sighting_13 ontology:atTime :2018-10-24 .
+
+:Sighting_14 ontology:atTime :2018-02-09 .
+
+:Sighting_15 ontology:atTime :2018-10-26 .
+
+:Sighting_16 ontology:atTime :2018-08-07 .
+
+:Sighting_17 ontology:atTime :2018-11-17 .
+
+:Sighting_18 ontology:atTime :2018-10-17 .
+
+:Sighting_19 ontology:atTime :2018-06-07;
+  ontology:involved <http://www.wikidata.org/entity/Q58697> .
+
+:Sighting_2 ontology:atTime :2018-01-26;
+  ontology:involved <http://www.wikidata.org/entity/Q858243> .
+
+:Sighting_20 ontology:atTime :2018-01-08 .
+
+:Sighting_21 ontology:atTime :2018-07-10;
+  ontology:involved <http://www.wikidata.org/entity/Q25311> .
+
+:Sighting_22 ontology:atTime :2018-09-30 .
+
+:Sighting_23 ontology:atTime :2018-12-26;
+  ontology:involved <http://www.wikidata.org/entity/Q25311> .
+
+:Sighting_24 ontology:atTime :2018-03-08;
+  ontology:involved <http://www.wikidata.org/entity/Q662672> .
+
+:Sighting_25 ontology:atTime :2018-04-15;
+  ontology:involved <http://www.wikidata.org/entity/Q662672> .
+
+:Sighting_26 ontology:atTime :2018-08-14;
+  ontology:involved <http://www.wikidata.org/entity/Q25311> .
+
+:Sighting_27 ontology:atTime :2018-01-17;
+  ontology:involved <http://www.wikidata.org/entity/Q650143> .
+
+:Sighting_28 ontology:atTime :2018-12-11;
+  ontology:involved <http://www.wikidata.org/entity/Q25311> .
+
+:Sighting_29 ontology:atTime :2018-08-18;
+  ontology:involved <http://www.wikidata.org/entity/Q15872> .
+
+:Sighting_3 ontology:atTime :2018-08-05;
+  ontology:involved <http://www.wikidata.org/entity/Q25961> .
+
+:Sighting_30 ontology:atTime :2018-09-12;
+  ontology:involved <http://www.wikidata.org/entity/Q26050> .
+
+:Sighting_31 ontology:atTime :2018-11-27 .
+
+:Sighting_32 ontology:atTime :2018-11-18;
+  ontology:involved <http://www.wikidata.org/entity/Q539670> .
+
+:Sighting_33 ontology:atTime :2018-08-11;
+  ontology:involved <http://www.wikidata.org/entity/Q26050> .
+
+:Sighting_34 ontology:atTime :2018-01-04 .
+
+:Sighting_35 ontology:atTime :2018-10-15;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_36 ontology:atTime :2018-12-14;
+  ontology:involved <http://www.wikidata.org/entity/Q15872> .
+
+:Sighting_37 ontology:atTime :2018-02-13;
+  ontology:involved <http://www.wikidata.org/entity/Q213383> .
+
+:Sighting_38 ontology:atTime :2018-10-17;
+  ontology:involved <http://www.wikidata.org/entity/Q213383> .
+
+:Sighting_39 ontology:atTime :2018-09-08;
+  ontology:involved <http://www.wikidata.org/entity/Q15872> .
+
+:Sighting_4 ontology:atTime :2018-11-10;
+  ontology:involved <http://www.wikidata.org/entity/Q539670> .
+
+:Sighting_40 ontology:atTime :2018-04-08;
+  ontology:involved <http://www.wikidata.org/entity/Q8331> .
+
+:Sighting_41 ontology:atTime :2018-09-17;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_42 ontology:atTime :2018-07-13;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_43 ontology:atTime :2018-08-03;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_44 ontology:atTime :2018-02-28;
+  ontology:involved <http://www.wikidata.org/entity/Q8331> .
+
+:Sighting_45 ontology:atTime :2018-03-02;
+  ontology:involved <http://www.wikidata.org/entity/Q8331> .
+
+:Sighting_46 ontology:atTime :2018-07-07;
+  ontology:involved <http://www.wikidata.org/entity/Q8331> .
+
+:Sighting_47 ontology:atTime :2018-10-26;
+  ontology:involved <http://www.wikidata.org/entity/Q15872> .
+
+:Sighting_48 ontology:atTime :2019-04-11;
+  ontology:involved <http://www.wikidata.org/entity/Q15879> .
+
+:Sighting_49 ontology:atTime :2019-09-20;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_5 ontology:atTime :2018-12-20;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_50 ontology:atTime :2019-09-19;
+  ontology:involved <http://www.wikidata.org/entity/Q539670> .
+
+:Sighting_51 ontology:atTime :2019-07-10;
+  ontology:involved <http://www.wikidata.org/entity/Q8331> .
+
+:Sighting_52 ontology:atTime :2019-07-21;
+  ontology:involved <http://www.wikidata.org/entity/Q858243> .
+
+:Sighting_53 ontology:atTime :2019-09-27;
+  ontology:involved <http://www.wikidata.org/entity/Q858243> .
+
+:Sighting_54 ontology:atTime :2019-11-27;
+  ontology:involved <http://www.wikidata.org/entity/Q8331> .
+
+:Sighting_55 ontology:atTime :2019-01-17;
+  ontology:involved <http://www.wikidata.org/entity/Q25961> .
+
+:Sighting_56 ontology:atTime :2019-06-25 .
+
+:Sighting_57 ontology:atTime :2019-11-17;
+  ontology:involved <http://www.wikidata.org/entity/Q539670> .
+
+:Sighting_58 ontology:atTime :2019-08-28 .
+
+:Sighting_59 ontology:atTime :2019-12-16 .
+
+:Sighting_6 ontology:atTime :2018-09-27;
+  ontology:involved <http://www.wikidata.org/entity/Q8331> .
+
+:Sighting_60 ontology:atTime :2019-01-05;
+  ontology:involved <http://www.wikidata.org/entity/Q58697> .
+
+:Sighting_61 ontology:atTime :2019-04-29;
+  ontology:involved <http://www.wikidata.org/entity/Q58697> .
+
+:Sighting_62 ontology:atTime :2019-04-19;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_63 ontology:atTime :2019-03-21;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_64 ontology:atTime :2019-06-19;
+  ontology:involved <http://www.wikidata.org/entity/Q58697> .
+
+:Sighting_65 ontology:atTime :2019-02-22;
+  ontology:involved <http://www.wikidata.org/entity/Q58697> .
+
+:Sighting_66 ontology:atTime :2019-04-07 .
+
+:Sighting_67 ontology:atTime :2019-06-29 .
+
+:Sighting_68 ontology:atTime :2019-11-17;
+  ontology:involved <http://www.wikidata.org/entity/Q58697> .
+
+:Sighting_69 ontology:atTime :2019-07-30;
+  ontology:involved <http://www.wikidata.org/entity/Q58697> .
+
+:Sighting_7 ontology:atTime :2018-12-30;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_70 ontology:atTime :2019-07-06;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_71 ontology:atTime :2019-08-14;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_72 ontology:atTime :2019-04-01;
+  ontology:involved <http://www.wikidata.org/entity/Q539670> .
+
+:Sighting_73 ontology:atTime :2019-11-21;
+  ontology:involved <http://www.wikidata.org/entity/Q15879> .
+
+:Sighting_74 ontology:atTime :2019-02-21;
+  ontology:involved <http://www.wikidata.org/entity/Q25311> .
+
+:Sighting_75 ontology:atTime :2019-03-16;
+  ontology:involved <http://www.wikidata.org/entity/Q650143> .
+
+:Sighting_76 ontology:atTime :2019-07-14;
+  ontology:involved <http://www.wikidata.org/entity/Q858243> .
+
+:Sighting_77 ontology:atTime :2019-02-17;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_78 ontology:atTime :2019-02-03;
+  ontology:involved <http://www.wikidata.org/entity/Q858243> .
+
+:Sighting_79 ontology:atTime :2019-09-08;
+  ontology:involved <http://www.wikidata.org/entity/Q8331> .
+
+:Sighting_8 ontology:atTime :2018-01-20;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_80 ontology:atTime :2019-03-13;
+  ontology:involved <http://www.wikidata.org/entity/Q15879> .
+
+:Sighting_81 ontology:atTime :2019-10-12;
+  ontology:involved <http://www.wikidata.org/entity/Q15879> .
+
+:Sighting_82 ontology:atTime :2019-11-15;
+  ontology:involved <http://www.wikidata.org/entity/Q15872> .
+
+:Sighting_83 ontology:atTime :2019-06-15;
+  ontology:involved <http://www.wikidata.org/entity/Q662672> .
+
+:Sighting_84 ontology:atTime :2019-10-27;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_85 ontology:atTime :2019-04-22;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_86 ontology:atTime :2019-06-22;
+  ontology:involved <http://www.wikidata.org/entity/Q15872> .
+
+:Sighting_87 ontology:atTime :2019-08-17;
+  ontology:involved <http://www.wikidata.org/entity/Q8331> .
+
+:Sighting_88 ontology:atTime :2019-05-08;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_89 ontology:atTime :2019-08-31;
+  ontology:involved <http://www.wikidata.org/entity/Q15872> .
+
+:Sighting_9 ontology:atTime :2018-01-01;
+  ontology:involved <http://www.wikidata.org/entity/Q25311> .
+
+:Sighting_90 ontology:atTime :2019-11-15;
+  ontology:involved <http://www.wikidata.org/entity/Q15872> .
+
+:Sighting_91 ontology:atTime :2019-06-19;
+  ontology:involved <http://www.wikidata.org/entity/Q15872> .
+
+:Sighting_92 ontology:atTime :2019-07-19;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_93 ontology:atTime :2019-12-29;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_94 ontology:atTime :2019-05-06;
+  ontology:involved <http://www.wikidata.org/entity/Q8331> .
+
+:Sighting_95 ontology:atTime :2019-03-17;
+  ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_0 ontology:involved <http://www.wikidata.org/entity/Q262307> .
+
+:Sighting_1 ontology:involved <http://www.wikidata.org/entity/Q25961> .
+
+:Sighting_10 ontology:involved <http://www.wikidata.org/entity/Q188601> .
+
+:Sighting_11 ontology:involved <http://www.wikidata.org/entity/Q26050> .
+
+:Sighting_12 ontology:involved <http://www.wikidata.org/entity/Q25311> .
+
+:Sighting_13 ontology:involved <http://www.wikidata.org/entity/Q25311> .
+
+:Sighting_16 ontology:involved <http://www.wikidata.org/entity/Q25311> .
+
+:Sighting_17 ontology:involved <http://www.wikidata.org/entity/Q58697> .
+
+<http://www.wikidata.org/entity/Q27066> :eatAnimal <http://www.wikidata.org/entity/Q243727>;
+  :hasStatus :Missing;
+  :preferredHabitat :Murgia .
+
+<http://www.wikidata.org/entity/Q58697> :eatAnimal <http://www.wikidata.org/entity/Q662672>;
+  :hasStatus :AtRisk;
+  :preferredHabitat :Forest, <http://www.wikidata.org/entity/Q123991> .
+
+<http://www.wikidata.org/entity/Q213383> :eatAnimal <http://www.wikidata.org/entity/Q213383>,
+    <http://www.wikidata.org/entity/Q243727>;
+  :eatenByAnimal <http://www.wikidata.org/entity/Q213383>;
+  :hasStatus :Missing;
+  :preferredHabitat :Forest, :Murgia .
+
+<http://www.wikidata.org/entity/Q662672> :eatAnimal <http://www.wikidata.org/entity/Q243727>;
+  :eatenByAnimal <http://www.wikidata.org/entity/Q58697>;
+  :hasStatus :AtRisk;
+  :preferredHabitat :Forest .
+
+<http://www.wikidata.org/entity/Q858243> :eatAnimal <http://www.wikidata.org/entity/Q25961>;
+  :hasStatus :AtRisk;
+  :preferredHabitat :Forest, :Murgia .
+
+<http://www.wikidata.org/entity/Q18498> :eatAnimal <http://www.wikidata.org/entity/Q243727>,
+    <http://www.wikidata.org/entity/Q25311>, <http://www.wikidata.org/entity/Q8331>;
+  :hasStatus :Missing;
+  :preferredHabitat :Forest .
+
+<http://www.wikidata.org/entity/Q25311> :eatenByAnimal <http://www.wikidata.org/entity/Q18498>;
+  :hasStatus :AtRisk;
+  :preferredHabitat :Forest .
+
+<http://www.wikidata.org/entity/Q8331> :eatenByAnimal <http://www.wikidata.org/entity/Q18498>;
+  :hasStatus :Safe;
+  :preferredHabitat :Forest .
+
+<http://www.wikidata.org/entity/Q243727> :eatenByAnimal <http://www.wikidata.org/entity/Q18498>,
+    <http://www.wikidata.org/entity/Q213383>, <http://www.wikidata.org/entity/Q27066>,
+    <http://www.wikidata.org/entity/Q662672>;
+  :hasStatus :Missing;
+  :preferredHabitat <http://www.wikidata.org/entity/Q123991> .
+
+<http://www.wikidata.org/entity/Q25961> :eatenByAnimal <http://www.wikidata.org/entity/Q858243>;
+  :hasStatus :AtRisk;
+  :preferredHabitat <http://www.wikidata.org/entity/Q123991> .
+
+<http://www.wikidata.org/entity/Q382227> :hasHabitat :Forest .
+
+<http://www.wikidata.org/entity/Q3895664> :hasHabitat :Forest .
+
+<http://www.wikidata.org/entity/Q3936925> :hasHabitat :Beach, <http://www.wikidata.org/entity/Q123991>,
+    <http://www.wikidata.org/entity/Q165> .
+
+<http://www.wikidata.org/entity/Q680313> :hasHabitat :Murgia .
+
+<http://www.wikidata.org/entity/Q262307> :hasStatus :Safe;
+  :preferredHabitat <http://www.wikidata.org/entity/Q123991> .
+
+<http://www.wikidata.org/entity/Q15872> :hasStatus :AtRisk;
+  :preferredHabitat :Murgia .
+
+<http://www.wikidata.org/entity/Q122069> :hasStatus :Missing;
+  :preferredHabitat :Forest .
+
+<http://www.wikidata.org/entity/Q15879> :hasStatus :AtRisk;
+  :preferredHabitat :Murgia .
+
+<http://www.wikidata.org/entity/Q1675166> :hasStatus :Missing;
+  :preferredHabitat :Freshwater, <http://www.wikidata.org/entity/Q166735> .
+
+<http://www.wikidata.org/entity/Q188601> :hasStatus :Missing;
+  :preferredHabitat :Freshwater, <http://www.wikidata.org/entity/Q123991> .
+
+<http://www.wikidata.org/entity/Q223044> :hasStatus :Missing;
+  :preferredHabitat :Murgia, <http://www.wikidata.org/entity/Q165> .
+
+<http://www.wikidata.org/entity/Q26050> :hasStatus :Missing;
+  :preferredHabitat :Forest .
+
+<http://www.wikidata.org/entity/Q539670> :hasStatus :AtRisk;
+  :preferredHabitat :Forest, <http://www.wikidata.org/entity/Q166735> .
+
+<http://www.wikidata.org/entity/Q650143> :hasStatus :AtRisk;
+  :preferredHabitat :Forest, :Murgia .
+
+<http://www.wikidata.org/entity/Q212552> :hasStatus :Missing;
+  :preferredHabitat <http://www.wikidata.org/entity/Q165> .
+
+<http://www.wikidata.org/entity/Q217350> :hasStatus :Missing;
+  :preferredHabitat :Murgia .
+
+<http://www.wikidata.org/entity/Q550195> :hasStatus :Missing;
+  :preferredHabitat <http://www.wikidata.org/entity/Q165> .
+
+<http://www.wikidata.org/entity/Q618192> :hasStatus :Missing;
+  :preferredHabitat <http://www.wikidata.org/entity/Q123991> .
+
+<http://www.wikidata.org/entity/Q79915> :hasStatus :Missing;
+  :preferredHabitat :Freshwater, <http://www.wikidata.org/entity/Q166735> .
+
+:Progetto_tutela_biodiversità_dei_parchi_nazionali_pugliesi :mainProject <http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia>,
+    :Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale .
+
+:Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale
+  :placeOfResearch <http://www.wikidata.org/entity/Q382227>;
+  :subProjectOf :Progetto_tutela_biodiversità_dei_parchi_nazionali_pugliesi;
+  :subjectOfResearch <http://www.wikidata.org/entity/Q122069>, <http://www.wikidata.org/entity/Q15872>,
+    <http://www.wikidata.org/entity/Q15879>, <http://www.wikidata.org/entity/Q1675166>,
+    <http://www.wikidata.org/entity/Q188601>, <http://www.wikidata.org/entity/Q223044>,
+    <http://www.wikidata.org/entity/Q243727>, <http://www.wikidata.org/entity/Q25311>,
+    <http://www.wikidata.org/entity/Q25961>, <http://www.wikidata.org/entity/Q26050>,
+    <http://www.wikidata.org/entity/Q262307>, <http://www.wikidata.org/entity/Q27066>,
+    <http://www.wikidata.org/entity/Q539670>, <http://www.wikidata.org/entity/Q650143>,
+    <http://www.wikidata.org/entity/Q662672>, <http://www.wikidata.org/entity/Q8331>,
+    <http://www.wikidata.org/entity/Q858243> .
+
+<http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia>
+  :placeOfResearch <http://www.wikidata.org/entity/Q680313>;
+  :subProjectOf :Progetto_tutela_biodiversità_dei_parchi_nazionali_pugliesi;
+  :subjectOfResearch <http://www.wikidata.org/entity/Q15872>, <http://www.wikidata.org/entity/Q15879>,
+    <http://www.wikidata.org/entity/Q188601>, <http://www.wikidata.org/entity/Q223044>,
+    <http://www.wikidata.org/entity/Q25311>, <http://www.wikidata.org/entity/Q25961>,
+    <http://www.wikidata.org/entity/Q26050>, <http://www.wikidata.org/entity/Q262307>,
+    <http://www.wikidata.org/entity/Q27066>, <http://www.wikidata.org/entity/Q539670>,
+    <http://www.wikidata.org/entity/Q8331>, <http://www.wikidata.org/entity/Q858243> .
+
+:Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro :endYear 2019;
+  :placeOfResearch <http://www.wikidata.org/entity/Q3895664>;
+  :subjectOfResearch <http://www.wikidata.org/entity/Q15872>, <http://www.wikidata.org/entity/Q213383>,
+    <http://www.wikidata.org/entity/Q262307>, <http://www.wikidata.org/entity/Q8331> .
+
+:Biodiversità_delle_specie_orticole_della_Puglia :placeOfResearch <http://www.wikidata.org/entity/Q3936925>;
+  :subjectOfResearch <http://www.wikidata.org/entity/Q25311>, <http://www.wikidata.org/entity/Q262307>,
+    <http://www.wikidata.org/entity/Q27066>, <http://www.wikidata.org/entity/Q58697> .
+
+:Barbara_Bertoli :projectLeader :Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro;
+  :workOnProject :Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro;
+  :workOnZone <http://www.wikidata.org/entity/Q3895664> .
+
+:Claudia_Mattioni :projectLeader :Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale;
+  :workOnProject :Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale;
+  :workOnZone <http://www.wikidata.org/entity/Q382227> .
+
+:Francesca_Chiocchini :projectLeader :Biodiversità_delle_specie_orticole_della_Puglia;
+  :workOnProject :Biodiversità_delle_specie_orticole_della_Puglia;
+  :workOnZone <http://www.wikidata.org/entity/Q3936925> .
+
+:Muriel_Virginie_Gaudet :projectLeader <http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia>;
+  :workOnProject <http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia>;
+  :workOnZone <http://www.wikidata.org/entity/Q680313> .
+
+:Silvia_Portarena :projectLeader <http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia>;
+  :workOnProject <http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia>;
+  :workOnZone <http://www.wikidata.org/entity/Q680313> .
+
+:Andrea_Pisanelli :curriculumDescription "Ricercatore universitario specializzato nella conduzione di indagini sul campo scientifico, raccogliendo ed elaborando dati specifici mediante apposite tecniche di rilevazione e trattamento. In grado di analizzare e interpretare le informazioni ricavate sulla base dei vari obiettivi conoscitivi iniziali come delle eventuali variazioni necessarie durante tutta la fase di ricerca. Particolarmente propenso alla pianificazione di indagine, ai tempi di realizzazione e all’oculata gestione dei budget a disposizione. Caratterizzato da spiccate capacità nel redigere idee progettuali assecondando le istruzioni fornite dai diversi soggetti finanziatori, pubblici o privati."@it;
+  :workOnProject :Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale;
+  :workOnZone <http://www.wikidata.org/entity/Q382227> .
+
+:Andrea_Scartazza :workOnProject :Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale;
+  :workOnZone <http://www.wikidata.org/entity/Q382227> .
+
+:Clelia_Cirillo :workOnProject :Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro;
+  :workOnZone <http://www.wikidata.org/entity/Q3895664> .
+
+:Daniela_Di_Baccio :workOnProject :Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro;
+  :workOnZone <http://www.wikidata.org/entity/Q3895664> .
+
+:Fiorella_Villani :workOnProject :Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale;
+  :workOnZone <http://www.wikidata.org/entity/Q382227> .
+
+:Giacomo_Assandri :curriculumDescription """Giacomo è ricercatore presso l’Università Telematica San Raffaele Roma e abilitato alle funzioni di Professore Universitario di II fascia. Già Dottore di Ricerca in Biologia presso l’Università degli Studi di Napoli “Federico II” ha svolto dal 2002 attività di docenza, su discipline del settore, dell’Università “Federico II” di Napoli.
+Dal 2013 è membro del Gruppo di Lavoro sulle questioni relative allo sfruttamento del suolo del Gargano presso l’U.I.D., di cui è socio."""@it;
+  :workOnProject :Biodiversità_delle_specie_orticole_della_Puglia;
+  :workOnZone <http://www.wikidata.org/entity/Q3936925> .
+
+:Marco_Ciolfi :workOnProject :Biodiversità_delle_specie_orticole_della_Puglia;
+  :workOnZone <http://www.wikidata.org/entity/Q3936925> .
+
+:Marco_Lauteri :workOnProject :Biodiversità_delle_specie_orticole_della_Puglia;
+  :workOnZone <http://www.wikidata.org/entity/Q3936925> .
+
+:Piero_Paris :workOnProject <http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia>;
+  :workOnZone <http://www.wikidata.org/entity/Q680313> .
+
+:Sighting_0 :numberOfSightings 8 .
+
+:Sighting_1 :numberOfSightings 5 .
+
+:Sighting_10 :numberOfSightings 6 .
+
+:Sighting_11 :numberOfSightings 8 .
+
+:Sighting_12 :numberOfSightings 8 .
+
+:Sighting_13 :numberOfSightings 2 .
+
+:Sighting_14 :numberOfSightings 8 .
+
+:Sighting_15 :numberOfSightings 4 .
+
+:Sighting_16 :numberOfSightings 7 .
+
+:Sighting_17 :numberOfSightings 12 .
+
+:Sighting_18 :numberOfSightings 1 .
+
+:Sighting_19 :numberOfSightings 9 .
+
+:Sighting_2 :numberOfSightings 2 .
+
+:Sighting_20 :numberOfSightings 3 .
+
+:Sighting_21 :numberOfSightings 2 .
+
+:Sighting_22 :numberOfSightings 4 .
+
+:Sighting_23 :numberOfSightings 9 .
+
+:Sighting_24 :numberOfSightings 10 .
+
+:Sighting_25 :numberOfSightings 9 .
+
+:Sighting_26 :numberOfSightings 1 .
+
+:Sighting_27 :numberOfSightings 6 .
+
+:Sighting_28 :numberOfSightings 9 .
+
+:Sighting_29 :numberOfSightings 7 .
+
+:Sighting_3 :numberOfSightings 3 .
+
+:Sighting_30 :numberOfSightings 4 .
+
+:Sighting_31 :numberOfSightings 4 .
+
+:Sighting_32 :numberOfSightings 8 .
+
+:Sighting_33 :numberOfSightings 9 .
+
+:Sighting_34 :numberOfSightings 1 .
+
+:Sighting_35 :numberOfSightings 1 .
+
+:Sighting_36 :numberOfSightings 4 .
+
+:Sighting_37 :numberOfSightings 7 .
+
+:Sighting_38 :numberOfSightings 7 .
+
+:Sighting_39 :numberOfSightings 3 .
+
+:Sighting_4 :numberOfSightings 7 .
+
+:Sighting_40 :numberOfSightings 4 .
+
+:Sighting_41 :numberOfSightings 4 .
+
+:Sighting_42 :numberOfSightings 2 .
+
+:Sighting_43 :numberOfSightings 3 .
+
+:Sighting_44 :numberOfSightings 2 .
+
+:Sighting_45 :numberOfSightings 8 .
+
+:Sighting_46 :numberOfSightings 6 .
+
+:Sighting_47 :numberOfSightings 4 .
+
+:Sighting_48 :numberOfSightings 3 .
+
+:Sighting_49 :numberOfSightings 9 .
+
+:Sighting_5 :numberOfSightings 10 .
+
+:Sighting_50 :numberOfSightings 1 .
+
+:Sighting_51 :numberOfSightings 10 .
+
+:Sighting_52 :numberOfSightings 4 .
+
+:Sighting_53 :numberOfSightings 5 .
+
+:Sighting_54 :numberOfSightings 2 .
+
+:Sighting_55 :numberOfSightings 9 .
+
+:Sighting_56 :numberOfSightings 10 .
+
+:Sighting_57 :numberOfSightings 5 .
+
+:Sighting_58 :numberOfSightings 5 .
+
+:Sighting_59 :numberOfSightings 8 .
+
+:Sighting_6 :numberOfSightings 5 .
+
+:Sighting_60 :numberOfSightings 2 .
+
+:Sighting_61 :numberOfSightings 3 .
+
+:Sighting_62 :numberOfSightings 7 .
+
+:Sighting_63 :numberOfSightings 8 .
+
+:Sighting_64 :numberOfSightings 9 .
+
+:Sighting_65 :numberOfSightings 4 .
+
+:Sighting_66 :numberOfSightings 7 .
+
+:Sighting_67 :numberOfSightings 5 .
+
+:Sighting_68 :numberOfSightings 1 .
+
+:Sighting_69 :numberOfSightings 9 .
+
+:Sighting_7 :numberOfSightings 4 .
+
+:Sighting_70 :numberOfSightings 9 .
+
+:Sighting_71 :numberOfSightings 5 .
+
+:Sighting_72 :numberOfSightings 5 .
+
+:Sighting_73 :numberOfSightings 4 .
+
+:Sighting_74 :numberOfSightings 1 .
+
+:Sighting_75 :numberOfSightings 4 .
+
+:Sighting_76 :numberOfSightings 6 .
+
+:Sighting_77 :numberOfSightings 3 .
+
+:Sighting_78 :numberOfSightings 6 .
+
+:Sighting_79 :numberOfSightings 1 .
+
+:Sighting_8 :numberOfSightings 4 .
+
+:Sighting_80 :numberOfSightings 8 .
+
+:Sighting_81 :numberOfSightings 1 .
+
+:Sighting_82 :numberOfSightings 1 .
+
+:Sighting_83 :numberOfSightings 4 .
+
+:Sighting_84 :numberOfSightings 5 .
+
+:Sighting_85 :numberOfSightings 10 .
+
+:Sighting_86 :numberOfSightings 5 .
+
+:Sighting_87 :numberOfSightings 4 .
+
+:Sighting_88 :numberOfSightings 10 .
+
+:Sighting_89 :numberOfSightings 3 .
+
+:Sighting_9 :numberOfSightings 7 .
+
+:Sighting_90 :numberOfSightings 2 .
+
+:Sighting_91 :numberOfSightings 1 .
+
+:Sighting_92 :numberOfSightings 6 .
+
+:Sighting_93 :numberOfSightings 6 .
+
+:Sighting_94 :numberOfSightings 7 .
+
+:Sighting_95 :numberOfSightings 4 .
+
+:Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale
+  :startYear 2001 .
+
+:Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro :startYear 2007 .
+
+:Biodiversità_delle_specie_orticole_della_Puglia :startYear 2003 .
+
+<http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia>
+  :startYear 2006 .
+
+:Progetto_tutela_biodiversità_dei_parchi_nazionali_pugliesi :startYear 2001 .
+
+:2018-03-23 time:inXSDDate "2018-03-23"^^xsd:date .
+
+:2018-12-11 time:inXSDDate "2018-12-11"^^xsd:date .
+
+:2018-02-17 time:inXSDDate "2018-02-17"^^xsd:date .
+
+:2018-08-31 time:inXSDDate "2018-08-31"^^xsd:date .
+
+:2018-07-18 time:inXSDDate "2018-07-18"^^xsd:date .
+
+:2018-10-24 time:inXSDDate "2018-10-24"^^xsd:date .
+
+:2018-02-09 time:inXSDDate "2018-02-09"^^xsd:date .
+
+:2018-10-26 time:inXSDDate "2018-10-26"^^xsd:date .
+
+:2018-08-07 time:inXSDDate "2018-08-07"^^xsd:date .
+
+:2018-11-17 time:inXSDDate "2018-11-17"^^xsd:date .
+
+:2018-10-17 time:inXSDDate "2018-10-17"^^xsd:date .
+
+:2018-06-07 time:inXSDDate "2018-06-07"^^xsd:date .
+
+:2018-01-26 time:inXSDDate "2018-01-26"^^xsd:date .
+
+:2018-01-08 time:inXSDDate "2018-01-08"^^xsd:date .
+
+:2018-07-10 time:inXSDDate "2018-07-10"^^xsd:date .
+
+:2018-09-30 time:inXSDDate "2018-09-30"^^xsd:date .
+
+:2018-12-26 time:inXSDDate "2018-12-26"^^xsd:date .
+
+:2018-03-08 time:inXSDDate "2018-03-08"^^xsd:date .
+
+:2018-04-15 time:inXSDDate "2018-04-15"^^xsd:date .
+
+:2018-08-14 time:inXSDDate "2018-08-14"^^xsd:date .
+
+:2018-01-17 time:inXSDDate "2018-01-17"^^xsd:date .
+
+:2018-08-18 time:inXSDDate "2018-08-18"^^xsd:date .
+
+:2018-08-05 time:inXSDDate "2018-08-05"^^xsd:date .
+
+:2018-09-12 time:inXSDDate "2018-09-12"^^xsd:date .
+
+:2018-11-27 time:inXSDDate "2018-11-27"^^xsd:date .
+
+:2018-11-18 time:inXSDDate "2018-11-18"^^xsd:date .
+
+:2018-08-11 time:inXSDDate "2018-08-11"^^xsd:date .
+
+:2018-01-04 time:inXSDDate "2018-01-04"^^xsd:date .
+
+:2018-10-15 time:inXSDDate "2018-10-15"^^xsd:date .
+
+:2018-12-14 time:inXSDDate "2018-12-14"^^xsd:date .
+
+:2018-02-13 time:inXSDDate "2018-02-13"^^xsd:date .
+
+:2018-09-08 time:inXSDDate "2018-09-08"^^xsd:date .
+
+:2018-11-10 time:inXSDDate "2018-11-10"^^xsd:date .
+
+:2018-04-08 time:inXSDDate "2018-04-08"^^xsd:date .
+
+:2018-09-17 time:inXSDDate "2018-09-17"^^xsd:date .
+
+:2018-07-13 time:inXSDDate "2018-07-13"^^xsd:date .
+
+:2018-08-03 time:inXSDDate "2018-08-03"^^xsd:date .
+
+:2018-02-28 time:inXSDDate "2018-02-28"^^xsd:date .
+
+:2018-03-02 time:inXSDDate "2018-03-02"^^xsd:date .
+
+:2018-07-07 time:inXSDDate "2018-07-07"^^xsd:date .
+
+:2019-04-11 time:inXSDDate "2019-04-11"^^xsd:date .
+
+:2019-09-20 time:inXSDDate "2019-09-20"^^xsd:date .
+
+:2018-12-20 time:inXSDDate "2018-12-20"^^xsd:date .
+
+:2019-09-19 time:inXSDDate "2019-09-19"^^xsd:date .
+
+:2019-07-10 time:inXSDDate "2019-07-10"^^xsd:date .
+
+:2019-07-21 time:inXSDDate "2019-07-21"^^xsd:date .
+
+:2019-09-27 time:inXSDDate "2019-09-27"^^xsd:date .
+
+:2019-11-27 time:inXSDDate "2019-11-27"^^xsd:date .
+
+:2019-01-17 time:inXSDDate "2019-01-17"^^xsd:date .
+
+:2019-06-25 time:inXSDDate "2019-06-25"^^xsd:date .
+
+:2019-11-17 time:inXSDDate "2019-11-17"^^xsd:date .
+
+:2019-08-28 time:inXSDDate "2019-08-28"^^xsd:date .
+
+:2019-12-16 time:inXSDDate "2019-12-16"^^xsd:date .
+
+:2018-09-27 time:inXSDDate "2018-09-27"^^xsd:date .
+
+:2019-01-05 time:inXSDDate "2019-01-05"^^xsd:date .
+
+:2019-04-29 time:inXSDDate "2019-04-29"^^xsd:date .
+
+:2019-04-19 time:inXSDDate "2019-04-19"^^xsd:date .
+
+:2019-03-21 time:inXSDDate "2019-03-21"^^xsd:date .
+
+:2019-06-19 time:inXSDDate "2019-06-19"^^xsd:date .
+
+:2019-02-22 time:inXSDDate "2019-02-22"^^xsd:date .
+
+:2019-04-07 time:inXSDDate "2019-04-07"^^xsd:date .
+
+:2019-06-29 time:inXSDDate "2019-06-29"^^xsd:date .
+
+:2019-07-30 time:inXSDDate "2019-07-30"^^xsd:date .
+
+:2018-12-30 time:inXSDDate "2018-12-30"^^xsd:date .
+
+:2019-07-06 time:inXSDDate "2019-07-06"^^xsd:date .
+
+:2019-08-14 time:inXSDDate "2019-08-14"^^xsd:date .
+
+:2019-04-01 time:inXSDDate "2019-04-01"^^xsd:date .
+
+:2019-11-21 time:inXSDDate "2019-11-21"^^xsd:date .
+
+:2019-02-21 time:inXSDDate "2019-02-21"^^xsd:date .
+
+:2019-03-16 time:inXSDDate "2019-03-16"^^xsd:date .
+
+:2019-07-14 time:inXSDDate "2019-07-14"^^xsd:date .
+
+:2019-02-17 time:inXSDDate "2019-02-17"^^xsd:date .
+
+:2019-02-03 time:inXSDDate "2019-02-03"^^xsd:date .
+
+:2019-09-08 time:inXSDDate "2019-09-08"^^xsd:date .
+
+:2018-01-20 time:inXSDDate "2018-01-20"^^xsd:date .
+
+:2019-03-13 time:inXSDDate "2019-03-13"^^xsd:date .
+
+:2019-10-12 time:inXSDDate "2019-10-12"^^xsd:date .
+
+:2019-11-15 time:inXSDDate "2019-11-15"^^xsd:date .
+
+:2019-06-15 time:inXSDDate "2019-06-15"^^xsd:date .
+
+:2019-10-27 time:inXSDDate "2019-10-27"^^xsd:date .
+
+:2019-04-22 time:inXSDDate "2019-04-22"^^xsd:date .
+
+:2019-06-22 time:inXSDDate "2019-06-22"^^xsd:date .
+
+:2019-08-17 time:inXSDDate "2019-08-17"^^xsd:date .
+
+:2019-05-08 time:inXSDDate "2019-05-08"^^xsd:date .
+
+:2019-08-31 time:inXSDDate "2019-08-31"^^xsd:date .
+
+:2018-01-01 time:inXSDDate "2018-01-01"^^xsd:date .
+
+:2019-07-19 time:inXSDDate "2019-07-19"^^xsd:date .
+
+:2019-12-29 time:inXSDDate "2019-12-29"^^xsd:date .
+
+:2019-05-06 time:inXSDDate "2019-05-06"^^xsd:date .
+
+:2019-03-17 time:inXSDDate "2019-03-17"^^xsd:date .
+
+_:node11 rdf:first _:node10 .
+
+_:node10 xsd:minInclusive 10 .
+
+_:node11 rdf:rest rdf:nil .
+
+_:node5 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+_:node6 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+_:node7 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+_:node9 owl:onDatatype xsd:integer;
+  owl:withRestrictions _:node11 .

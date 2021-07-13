@@ -1,0 +1,63 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix :      <http://localhost/apulian_fauna#> .
+@prefix lode:  <http://linkedevents.org/ontology/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+
+<urn:mapping-ImportSightings_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select ReferenceID, NumberOfSightings, Data,\nan.WikidataReference as Animal, ar.WikidataReference as Area\nfrom Sighting s\ninner join Area ar on s.IDArea = ar.ID\ninner join Animal an on s.IDAnimal = an.ID"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "NumberOfSightings" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  :numberOfSightings
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.wikidata.org/entity/{Area}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  lode:atPlace
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.wikidata.org/entity/{Animal}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  lode:involved
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://localhost/apulian_fauna#{Data}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  lode:atTime
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     :Sighting ;
+                                 rr:template  "http://localhost/apulian_fauna#Sighting_{ReferenceID}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:mapping--ImportDates>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select distinct Data\nfrom Sighting"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "Data" ;
+                                                 rr:datatype  xsd:date ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  time:inXSDDate
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://localhost/apulian_fauna#{Data}" ;
+                                 rr:termType  rr:IRI
+                               ] .

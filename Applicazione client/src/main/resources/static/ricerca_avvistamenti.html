@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Search for sightings</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/styles.css"/>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Apulian fauna</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="segnalazione_avvistamento.html">Report a sighting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ricerca_avvistamenti.html">Search for sightings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="animali_a_rischio.html">Animals at risk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="animali_fuori_habitat.html">Animals out of their habitat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dirigenti.html">Chief researchers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aree_ricercatori.html">Areas in which researchers operate</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <div>
+                <h2>Search for sightings</h2>
+                <i>On this page you can search for sightings of one animal per year</i>
+            </div>
+            <div class="inputFields">
+                <div>
+                    Year
+                    <input type="text" id="inputYear">
+                </div>
+                <div class="ui-widget">
+                    <label for="inputAnimal">Animal </label>
+                    <input id="inputAnimal">
+                </div>
+                <div class="ui-widget">
+                    <label for="inputArea">Area </label>
+                    <input id="inputArea">
+                </div>
+            </div>
+            <div class="actionButtons">
+                <button type="submit" class="btn btn-outline-danger" id="effettua_query">Search</button>
+            </div>
+            <div class="resultsContainer">
+                <table border="1" id="tableResults">
+                    <thead>
+                    <tr>
+                        <th>Animal</th>
+                        <th>Place</th>
+                        <th>Number of sightings</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- Optional JavaScript -->
+        <script src="js/webservice_call.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                $("#effettua_query").click(function () {
+
+                    var animale = $("#inputAnimal").data("value");
+                    if(!animale) animale = "";
+
+                    var area = $("#inputArea").data("value");
+                    if(!area) area = "";
+
+                    effettuaQuery("ricercaAvvistamenti?year="+$("#inputYear").val()+"&animale="+animale+"&area="+area, function(data){
+
+                        if(data.length == 0)
+                        alert("No data found");
+
+                        $("#tableResults > tbody > tr").remove();
+
+                        for(var i = 0; i < data.length; i++){
+
+                            var itemData = data[i];
+
+                            $("#tableResults").append("<tr><td>"+itemData[0]+"</td><td>"+itemData[1]+"</td><td>"+itemData[2]+"</td></tr>");
+                        }
+
+                    });
+                })
+
+                animalAutocomplete();
+                areaAutocomplete();
+            })
+
+            function animalAutocomplete(){
+
+                effettuaQueryAutocomplete("ottieniAnimali?filter=" + $("#inputAnimal").val(), "inputAnimal");
+
+            }
+            function areaAutocomplete(){
+
+                effettuaQueryAutocomplete("ottieniAree?filter=" + $("#inputArea").val(), "inputArea");
+
+            }
+
+        </script>
+    </body>
+</html>

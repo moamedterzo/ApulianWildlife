@@ -1,0 +1,24 @@
+.container{
+        margin-top:30px;
+}
+
+.inputFields{
+        margin-top:25px;
+}
+
+.actionButtons{
+        margin-top:25px;
+}
+.actionButtons button{
+    width:100%;
+}
+
+.resultsContainer{
+        margin-top:20px;
+        border-style:double
+}
+
+
+table{
+    width:100%
+}

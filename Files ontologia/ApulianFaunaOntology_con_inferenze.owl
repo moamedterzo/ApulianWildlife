@@ -1,0 +1,3764 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost/apulian_fauna#"
+     xml:base="http://localhost/apulian_fauna"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:ontology="http://linkedevents.org/ontology/"
+     xmlns:apulian_fauna="http://localhost/apulian_fauna#">
+    <owl:Ontology rdf:about="http://localhost/apulian_fauna">
+        <dc:creator>Racanati Amedeo</dc:creator>
+        <dc:creator>Sansonetti Angelo Pio</dc:creator>
+        <dc:date>24/01/2020</dc:date>
+        <dc:description xml:lang="it">L&apos;ontologia modella la fauna pugliese e la registrazione della presenza di ogni animale che ne fa parte. Inotre permette di definire gli habitat del territorio e i progetti di ricerca attivi, al fine di monitorare lo status di conservazione degli animali nelle varie aree geografiche.</dc:description>
+        <dc:description xml:lang="en">The ontology models the Apulian fauna and the recording of the presence of each animal that belongs to it. Furthermore, it allows to define the habitats of the territory and the active research projects, in order to monitor the status of conservation  of animals in the various geographical areas.</dc:description>
+        <dc:title xml:lang="en">Apulian wildlife</dc:title>
+        <dc:title xml:lang="it">Fauna pugliese</dc:title>
+        <vann:preferredNamespacePrefix>apuw</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://localhost/apulian_fauna</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">ApulianWildlife</rdfs:label>
+        <rdfs:label xml:lang="it">FaunaPugliese</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linkedevents.org/ontology/atPlace -->
+
+    <owl:ObjectProperty rdf:about="http://linkedevents.org/ontology/atPlace">
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdfs:range rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://linkedevents.org/ontology/atPlace"/>
+            <rdf:Description rdf:about="http://localhost/apulian_fauna#subZoneOf"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">It indicates where the sighting has taken place</rdfs:comment>
+        <rdfs:label xml:lang="en">at place</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://linkedevents.org/ontology/atTime -->
+
+    <owl:ObjectProperty rdf:about="http://linkedevents.org/ontology/atTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <rdfs:comment xml:lang="en">It indicates the time when the sighting has occourred</rdfs:comment>
+        <rdfs:label xml:lang="en">at time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://linkedevents.org/ontology/involved -->
+
+    <owl:ObjectProperty rdf:about="http://linkedevents.org/ontology/involved">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdfs:range rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:comment xml:lang="en">It indicates the object of the sighting</rdfs:comment>
+        <rdfs:label xml:lang="en">involved</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#eatAnimal -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#eatAnimal">
+        <owl:inverseOf rdf:resource="http://localhost/apulian_fauna#eatenByAnimal"/>
+        <rdfs:domain rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:range rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:comment xml:lang="en">It indicates the fact that an animals eats another animal</rdfs:comment>
+        <rdfs:label xml:lang="en">eat animal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#eatenByAnimal -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#eatenByAnimal">
+        <rdfs:domain rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:range rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:comment xml:lang="en">It indicates the fact that an animals has been eaten by another animal</rdfs:comment>
+        <rdfs:label xml:lang="en">eaten by animal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#hasHabitat -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#hasHabitat">
+        <rdfs:domain rdf:resource="http://www.wikidata.org/entity/Q179049"/>
+        <rdfs:range rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdfs:comment xml:lang="en">Every protected area has one or plus habitats</rdfs:comment>
+        <rdfs:label xml:lang="en">has habitat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#hasStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:range rdf:resource="http://localhost/apulian_fauna#Status"/>
+        <rdfs:comment xml:lang="en">It indicates the status of preservation of one animal</rdfs:comment>
+        <rdfs:label xml:lang="en">has status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#mainProject -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#mainProject">
+        <owl:inverseOf rdf:resource="http://localhost/apulian_fauna#subProjectOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <rdfs:range rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <rdfs:comment xml:lang="en">It indicates the main project, which has several subprojects</rdfs:comment>
+        <rdfs:label xml:lang="en">main project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#placeOfResearch -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#placeOfResearch">
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <rdfs:range rdf:resource="http://www.wikidata.org/entity/Q179049"/>
+        <rdfs:comment xml:lang="en">A research project can have one or more areas of study</rdfs:comment>
+        <rdfs:label xml:lang="en">place of research</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#preferredHabitat -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#preferredHabitat">
+        <rdfs:domain rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:range rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdfs:comment xml:lang="en">An animal has one or more habitat for which it is more suited</rdfs:comment>
+        <rdfs:label xml:lang="en">preferred habitat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#projectLeader -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#projectLeader">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/apulian_fauna#workOnProject"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <rdfs:range rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <rdfs:comment xml:lang="en">A researcher can be the leader of a project</rdfs:comment>
+        <rdfs:label xml:lang="en">project leader</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#subProjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#subProjectOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <rdfs:range rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <rdfs:comment xml:lang="en">It indicates the fact that a project is a subproject of another one</rdfs:comment>
+        <rdfs:label xml:lang="en">sub project of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#subZoneOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#subZoneOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna#SecondLevelArea"/>
+        <rdfs:range rdf:resource="http://www.wikidata.org/entity/Q15089"/>
+        <rdfs:comment xml:lang="en">A zone of second order level belongs to one of higher order</rdfs:comment>
+        <rdfs:label xml:lang="en">sub zone of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#subjectOfResearch -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#subjectOfResearch">
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <rdfs:range rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:comment xml:lang="en">A research project can have one or more animal to study</rdfs:comment>
+        <rdfs:label xml:lang="en">subject of research</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#workOnProject -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#workOnProject">
+        <rdfs:domain rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <rdfs:range rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <rdfs:comment xml:lang="en">A researcher works on a project</rdfs:comment>
+        <rdfs:label xml:lang="en">work on project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#workOnZone -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/apulian_fauna#workOnZone">
+        <rdfs:domain rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <rdfs:range rdf:resource="http://www.wikidata.org/entity/Q179049"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/apulian_fauna#workOnProject"/>
+            <rdf:Description rdf:about="http://localhost/apulian_fauna#placeOfResearch"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">A researcher, working on a project, can care about different areas</rdfs:comment>
+        <rdfs:label xml:lang="en">work on zone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/apulian_fauna#curriculumDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/apulian_fauna#curriculumDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="en">Description of the curriculum of the researcher</rdfs:comment>
+        <rdfs:label xml:lang="en">curriculum description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#endYear -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/apulian_fauna#endYear">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Ending year of a research project</rdfs:comment>
+        <rdfs:label xml:lang="en">end year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#numberOfSightings -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/apulian_fauna#numberOfSightings">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of animals involved in a sighting</rdfs:comment>
+        <rdfs:label xml:lang="en">number of sightings</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/apulian_fauna#startYear -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/apulian_fauna#startYear">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Starting year of a research project</rdfs:comment>
+        <rdfs:label xml:lang="en">start year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#inXSDDate">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Position of an instant, expressed using xsd:date</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linkedevents.org/ontology/Event -->
+
+    <owl:Class rdf:about="http://linkedevents.org/ontology/Event">
+        <rdfs:comment xml:lang="en">It represents the event that happens in a place, at given time, and it is about a subject and an object</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Area -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#Area">
+        <rdfs:comment xml:lang="en">Territorial entity of which the borders are determined by human features</rdfs:comment>
+        <rdfs:label xml:lang="en">Area</rdfs:label>
+        <skos:broader rdf:resource="http://www.wikidata.org/entity/Q15642541"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#ChiefResearcher -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#ChiefResearcher">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/apulian_fauna#projectLeader"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <rdfs:comment xml:lang="en">A researcher leading a research project</rdfs:comment>
+        <rdfs:label xml:lang="en">ChiefResearcher</rdfs:label>
+        <skos:broader rdf:resource="http://www.wikidata.org/entity/Q1251441"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Habitat -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#Habitat">
+        <rdfs:comment xml:lang="en">A habitat is the type of natural environment in which a particular species of organism lives. It is characterized by both physical and biological features. A species&apos; habitat is those places where it can find food, shelter, protection and mates for reproduction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Habitat</rdfs:label>
+        <skos:narrower rdf:resource="http://www.wikidata.org/entity/Q52105"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Land -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#Land">
+        <rdfs:subClassOf rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdfs:comment xml:lang="en">A habitat of type land, has most of its components on a solid surface.</rdfs:comment>
+        <rdfs:label xml:lang="en">Land</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#MarineAnimal -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#MarineAnimal">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/apulian_fauna#preferredHabitat"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://localhost/apulian_fauna#Water"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:comment xml:lang="en">Are animals that live in the salt water of the sea or ocean, or the brackish water of coastal estuaries.</rdfs:comment>
+        <rdfs:label xml:lang="en">MarineAnimal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Predator -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#Predator">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/apulian_fauna#eatAnimal"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.wikidata.org/entity/Q729"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:comment xml:lang="en">Are organism that kills and eats another organism, its prey.</rdfs:comment>
+        <rdfs:label xml:lang="en">Predator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#SecondLevelArea -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#SecondLevelArea">
+        <rdfs:subClassOf rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdfs:comment xml:lang="en">It is a subdivision of the territory, based on giuridic laws.</rdfs:comment>
+        <rdfs:label xml:lang="en">SecondLevelArea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#Sighting">
+        <rdfs:subClassOf rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdfs:comment xml:lang="en">The event of sighting represent the fact that different people have seen an animal at a particular place and in a particular time, for a number of times</rdfs:comment>
+        <rdfs:label xml:lang="en">Sighting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#SightingGroup -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#SightingGroup">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/apulian_fauna#numberOfSightings"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdfs:comment xml:lang="en">It represents multiple sightings, that makes the appearance of an animal more significant</rdfs:comment>
+        <rdfs:label xml:lang="en">SightingGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Status -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#Status">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/apulian_fauna#AtRisk"/>
+                    <rdf:Description rdf:about="http://localhost/apulian_fauna#Missing"/>
+                    <rdf:Description rdf:about="http://localhost/apulian_fauna#Safe"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Population status of an animal</rdfs:comment>
+        <rdfs:label xml:lang="en">Status</rdfs:label>
+        <skos:narrower rdf:resource="http://www.wikidata.org/entity/Q82673"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Water -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna#Water">
+        <rdfs:subClassOf rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdfs:comment xml:lang="en">A habitat of type water, has its components on water.</rdfs:comment>
+        <rdfs:label xml:lang="en">Water</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/apulian_fauna/ResearchProject -->
+
+    <owl:Class rdf:about="http://localhost/apulian_fauna/ResearchProject">
+        <rdfs:comment xml:lang="en">Activities that aims to increase the stock of knowledge, including knowledge of humans, culture and society, and the use of this stock of knowledge to devise new applications.</rdfs:comment>
+        <rdfs:label xml:lang="en">ResearchProject</rdfs:label>
+        <skos:narrower rdf:resource="http://www.wikidata.org/entity/Q3922738"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Istant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Istant">
+        <rdfs:comment xml:lang="en">It represents a particular istant in time, so it has a date and a time</rdfs:comment>
+        <rdfs:label xml:lang="en">Istant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q10811 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q10811">
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdfs:comment xml:lang="en">Reptiles are tetrapod animals in the class Reptilia, comprising today&apos;s turtles, crocodilians, snakes, amphisbaenians, lizards, tuatara, and their extinct relatives.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reptiles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q10850 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q10850">
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <rdfs:comment xml:lang="en">Rodents (from Latin Rodere, &quot;to gnaw&quot;) are mammals of the order Rodentia, which are characterized by a single pair of continuously growing incisors in each of the upper and lower jaws.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rodent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q10908 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q10908">
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdfs:comment xml:lang="en">Amphibians are ectothermic, tetrapod vertebrates of the class Amphibia</rdfs:comment>
+        <rdfs:label xml:lang="en">Amphibia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q15089 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q15089">
+        <rdfs:subClassOf rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdfs:comment xml:lang="en">Is an administrative division within a country or state</rdfs:comment>
+        <rdfs:label xml:lang="en">Province</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q152 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q152">
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdfs:comment xml:lang="en">Fish are gill-bearing aquatic craniate animals that lack limbs with digits.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fish</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q15284 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q15284">
+        <rdfs:subClassOf rdf:resource="http://localhost/apulian_fauna#SecondLevelArea"/>
+        <rdfs:comment xml:lang="en">The municipality represents the finest territorial entity</rdfs:comment>
+        <rdfs:label xml:lang="en">Municipality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q1650915 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q1650915">
+        <rdfs:comment xml:lang="en">Someone who work in a reasarch project.</rdfs:comment>
+        <rdfs:label xml:lang="en">Researcher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q179049 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q179049">
+        <rdfs:subClassOf rdf:resource="http://localhost/apulian_fauna#SecondLevelArea"/>
+        <rdfs:comment xml:lang="en">Protected areas or conservation areas are locations which receive protection because of their recognized natural, ecological or cultural values. The term &quot;protected area&quot; also includes marine protected areas. Protected areas are essential for biodiversity conservation, often providing habitat and protection from hunting for threatened and endangered species. Protection helps maintain ecological processes that cannot survive in most intensely managed landscapes and seascapes.</rdfs:comment>
+        <rdfs:label xml:lang="en">ProtectedArea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q25241 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q25241">
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:comment xml:lang="en">Comprise all species of animals within the subphylum Vertebrata. The defining characteristic of a vertebrate is the vertebral column, in which the notochord (a stiff rod of uniform composition) found in all chordates has been replaced by a segmented series of stiffer elements (vertebrae) separated by mobile joints.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vertebrate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q43806 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q43806">
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdfs:comment xml:lang="en">Invertebrates are animals that neither possess nor develop a vertebral column (commonly known as a backbone or spine), derived from the notochord.</rdfs:comment>
+        <rdfs:label xml:lang="en">Invertebrate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q5113 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q5113">
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdfs:comment xml:lang="en">Birds are a group of endothermic vertebrates constituting the class Aves, characterized by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bird</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q729 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q729">
+        <rdfs:comment xml:lang="en">Animals are multicellular eukaryotic organisms that form the biological kingdom Animalia. With few exceptions, animals consume organic material, breathe oxygen, are able to move, can reproduce sexually, and grow from a hollow sphere of cells, the blastula, during embryonic development.</rdfs:comment>
+        <rdfs:label xml:lang="en">Animal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q7377 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q7377">
+        <rdfs:subClassOf rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdfs:comment xml:lang="en">Mammals (from Latin mamma &quot;breast&quot;) are vertebrate animals constituting the class Mammalia (/məˈmeɪliə/), and characterized by the presence of mammary glands which in females (and sometimes males[1]) produce milk for feeding (nursing) their young, a neocortex (a region of the brain), fur or hair, and three middle ear bones. These characteristics distinguish them from reptiles and birds, from which they diverged in the late Triassic, 201–227 million years ago.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mammal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/apulian_fauna#Andrea_Pisanelli -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Andrea_Pisanelli">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <curriculumDescription xml:lang="it">Ricercatore universitario specializzato nella conduzione di indagini sul campo scientifico, raccogliendo ed elaborando dati specifici mediante apposite tecniche di rilevazione e trattamento. In grado di analizzare e interpretare le informazioni ricavate sulla base dei vari obiettivi conoscitivi iniziali come delle eventuali variazioni necessarie durante tutta la fase di ricerca. Particolarmente propenso alla pianificazione di indagine, ai tempi di realizzazione e all’oculata gestione dei budget a disposizione. Caratterizzato da spiccate capacità nel redigere idee progettuali assecondando le istruzioni fornite dai diversi soggetti finanziatori, pubblici o privati.</curriculumDescription>
+        <rdfs:label xml:lang="it">Andrea Pisanelli</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Andrea_Scartazza -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Andrea_Scartazza">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <rdfs:label xml:lang="it">Andrea Scartazza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#AtRisk -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#AtRisk">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Status"/>
+        <rdfs:comment xml:lang="en">It denotes the risk of the animal to be missing in the next period of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">At Risk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Barbara_Bertoli -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Barbara_Bertoli">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#ChiefResearcher"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <projectLeader rdf:resource="http://localhost/apulian_fauna#Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <rdfs:label xml:lang="it">Barbara Bertoli</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Beach -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Beach">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Land"/>
+        <rdfs:comment xml:lang="en">A beach is a landform alongside a body of water which consists of loose particles. The particles composing a beach are typically made from rock, such as sand, gravel, shingle, pebbles.</rdfs:comment>
+        <rdfs:label xml:lang="en">Beach</rdfs:label>
+        <skos:narrower>http://www.wikidata.org/entity/Q40080</skos:narrower>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Biodiversità_delle_specie_orticole_della_Puglia -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Biodiversità_delle_specie_orticole_della_Puglia">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <placeOfResearch rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q27066"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q58697"/>
+        <startYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</startYear>
+        <rdfs:label xml:lang="en">Biodiversity for the species of the Torre Guaceto&apos;s marine protected area</rdfs:label>
+        <rdfs:label xml:lang="it">Biodiversità delle specie nell&apos;area Marina Protetta di Torre Guaceto</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Claudia_Mattioni -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Claudia_Mattioni">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#ChiefResearcher"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <projectLeader rdf:resource="http://localhost/apulian_fauna#Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <rdfs:label xml:lang="it">Claudia Mattioni</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Clelia_Cirillo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Clelia_Cirillo">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <rdfs:label xml:lang="it">Clelia Cirillo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Daniela_Di_Baccio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Daniela_Di_Baccio">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <rdfs:label xml:lang="it">Daniela Di Baccio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Fiorella_Villani -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Fiorella_Villani">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <rdfs:label xml:lang="it">Fiorella Villani</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Forest -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Forest">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Land"/>
+        <rdfs:comment xml:lang="en">A large area covered by trees.</rdfs:comment>
+        <rdfs:label xml:lang="en">Forest</rdfs:label>
+        <skos:narrower rdf:resource="http://www.wikidata.org/entity/Q4421"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Francesca_Chiocchini -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Francesca_Chiocchini">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#ChiefResearcher"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <projectLeader rdf:resource="http://localhost/apulian_fauna#Biodiversità_delle_specie_orticole_della_Puglia"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Biodiversità_delle_specie_orticole_della_Puglia"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <rdfs:label xml:lang="it">Francesca Chiocchini</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Freshwater -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Freshwater">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Water"/>
+        <rdfs:comment xml:lang="en">It is any naturally occurring water except seawater and brackish water. Fresh water includes water in ice sheets, ice caps, glaciers, icebergs, bogs, ponds, lakes, rivers, streams, and even underground water called groundwater. Fresh water is generally characterized by having low concentrations of dissolved salts and other total dissolved solids.</rdfs:comment>
+        <rdfs:label xml:lang="en">Freshwater</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Giacomo_Assandri -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Giacomo_Assandri">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Biodiversità_delle_specie_orticole_della_Puglia"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <curriculumDescription xml:lang="it">Giacomo è ricercatore presso l’Università Telematica San Raffaele Roma e abilitato alle funzioni di Professore Universitario di II fascia. Già Dottore di Ricerca in Biologia presso l’Università degli Studi di Napoli “Federico II” ha svolto dal 2002 attività di docenza, su discipline del settore, dell’Università “Federico II” di Napoli.
+Dal 2013 è membro del Gruppo di Lavoro sulle questioni relative allo sfruttamento del suolo del Gargano presso l’U.I.D., di cui è socio.</curriculumDescription>
+        <rdfs:label xml:lang="it">Giacomo Assandri</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Marco_Ciolfi -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Marco_Ciolfi">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Biodiversità_delle_specie_orticole_della_Puglia"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <rdfs:label xml:lang="it">Marco Ciolfi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Marco_Lauteri -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Marco_Lauteri">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Biodiversità_delle_specie_orticole_della_Puglia"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <rdfs:label xml:lang="it">Marco Lauteri</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Missing -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Missing">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Status"/>
+        <rdfs:comment xml:lang="en">It denotes the fact that an animal is not present in the territory.</rdfs:comment>
+        <rdfs:label xml:lang="en">Missing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Murgia -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Murgia">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Land"/>
+        <rdfs:comment xml:lang="en">It is a karst topographic plateau of rectangular shape in southern Italy. Most of it lies within Apulia and corresponds with the sub-region known as Murgia or Le Murge. The plateau lies mainly in the Metropolitan City of Bari and the province of Barletta-Andria-Trani, but extends into the provinces of Brindisi and Taranto to the south; and into Matera in Basilicata to the west.</rdfs:comment>
+        <rdfs:label xml:lang="en">Murgia</rdfs:label>
+        <skos:narrower rdf:resource="http://www.wikidata.org/entity/Q1051664"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Muriel_Virginie_Gaudet -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Muriel_Virginie_Gaudet">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#ChiefResearcher"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <projectLeader rdf:resource="http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <rdfs:label xml:lang="it">Muriel Virginie Gaudet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Piero_Paris -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Piero_Paris">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <rdfs:label xml:lang="it">Piero Paris</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Progetto_di_Corridoio_Ecologico_multifunzionale_del_fiume_Cervaro">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <placeOfResearch rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q213383"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <endYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</endYear>
+        <startYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</startYear>
+        <rdfs:label xml:lang="en">Multifunctional ecological corridor project of the Lama Balice regional natural park</rdfs:label>
+        <rdfs:label xml:lang="it">Progetto di Corridoio Ecologico multifunzionale del parco naturale regionale Lama Balice</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <placeOfResearch rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <subProjectOf rdf:resource="http://localhost/apulian_fauna#Progetto_tutela_biodiversità_dei_parchi_nazionali_pugliesi"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q122069"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q15879"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q1675166"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q188601"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q223044"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q243727"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q25961"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q26050"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q27066"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q539670"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q650143"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q662672"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q858243"/>
+        <startYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</startYear>
+        <rdfs:label xml:lang="it">Progetto tutela biodiversità del Parco Nazionale del Gargano</rdfs:label>
+        <rdfs:label xml:lang="en">Project of protection of biodiversity for the Gargano National Park</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Progetto_tutela_biodiversità_dei_parchi_nazionali_pugliesi -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Progetto_tutela_biodiversità_dei_parchi_nazionali_pugliesi">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <mainProject rdf:resource="http://localhost/apulian_fauna#Progetto_per_una_rete_della_mobilità_lenta_a_servizio_del_territorio_del_Parco_Nazionale"/>
+        <mainProject rdf:resource="http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia"/>
+        <startYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</startYear>
+        <rdfs:label xml:lang="it">Progetto tutela biodiversità dei parchi nazionali pugliesi</rdfs:label>
+        <rdfs:label xml:lang="en">Project of protection of biodiversity for the Apulian national parks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Safe -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Safe">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Status"/>
+        <rdfs:comment xml:lang="en">It indicates the fact that an animal lives without the problem to be missing in the next period of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Safe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_0 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_0">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-03-23"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_1">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-12-11"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25961"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_10 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_10">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-02-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q188601"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_11 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_11">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-08-31"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q26050"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_12 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_12">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-07-18"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_13 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_13">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-10-24"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_14 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_14">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-02-09"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_15 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_15">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-10-26"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_16 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_16">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-08-07"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_17">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SightingGroup"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-11-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q58697"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_18 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_18">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-10-17"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_19 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_19">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-06-07"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q58697"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_2 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_2">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-01-26"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q858243"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_20 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_20">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-01-08"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_21 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_21">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-07-10"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_22 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_22">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-09-30"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_23 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_23">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-12-26"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_24 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_24">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SightingGroup"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-03-08"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q662672"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_25 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_25">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-04-15"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q662672"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_26 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_26">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-08-14"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_27 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_27">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-01-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q650143"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_28 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_28">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-12-11"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_29 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_29">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-08-18"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_3 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_3">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-08-05"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25961"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_30 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_30">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-09-12"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q26050"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_31 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_31">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-11-27"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_32 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_32">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-11-18"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q539670"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_33 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_33">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-08-11"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q26050"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_34 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_34">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-01-04"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_35 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_35">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-10-15"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_36 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_36">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-12-14"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_37 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_37">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-02-13"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q213383"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_38 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_38">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-10-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q213383"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_39 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_39">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-09-08"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_4 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_4">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-11-10"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q539670"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_40 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_40">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-04-08"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_41 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_41">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-09-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_42 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_42">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-07-13"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_43 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_43">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-08-03"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_44 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_44">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-02-28"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_45 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_45">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-03-02"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_46 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_46">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-07-07"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_47 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_47">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-10-26"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_48 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_48">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-04-11"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15879"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_49 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_49">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-09-20"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_5 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_5">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SightingGroup"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-12-20"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_50 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_50">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-09-19"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q539670"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_51 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_51">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SightingGroup"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-07-10"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_52 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_52">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-07-21"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q858243"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_53 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_53">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-09-27"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q858243"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_54 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_54">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-11-27"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_55 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_55">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-01-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25961"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_56 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_56">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SightingGroup"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-06-25"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_57 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_57">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-11-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q539670"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_58 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_58">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-08-28"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_59 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_59">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-12-16"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_6 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_6">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-09-27"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_60 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_60">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-01-05"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q58697"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_61 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_61">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-04-29"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q58697"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_62 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_62">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-04-19"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_63 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_63">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-03-21"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_64 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_64">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-06-19"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q58697"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_65 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_65">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-02-22"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q58697"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_66 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_66">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-04-07"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_67 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_67">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-06-29"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_68 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_68">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-11-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q58697"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_69 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_69">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-07-30"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q58697"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_7 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_7">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-12-30"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_70 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_70">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-07-06"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_71 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_71">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3936925"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-08-14"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_72 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_72">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-04-01"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q539670"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_73 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_73">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-11-21"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15879"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_74 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_74">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-02-21"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_75 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_75">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-03-16"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q650143"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_76 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_76">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-07-14"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q858243"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_77 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_77">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-02-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_78 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_78">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-02-03"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q858243"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_79 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_79">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-09-08"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_8 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_8">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-01-20"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_80 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_80">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-03-13"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15879"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_81 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_81">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-10-12"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15879"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_82 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_82">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-11-15"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_83 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_83">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q382227"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-06-15"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q662672"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_84 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_84">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-10-27"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_85 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_85">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SightingGroup"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-04-22"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_86 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_86">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-06-22"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_87 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_87">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-08-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_88 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_88">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SightingGroup"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-05-08"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_89 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_89">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-08-31"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_9 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_9">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2018-01-01"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_90 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_90">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-11-15"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_91 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_91">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-06-19"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_92 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_92">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-07-19"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_93 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_93">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-12-29"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_94 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_94">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-05-06"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Sighting_95 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Sighting_95">
+        <rdf:type rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Sighting"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <ontology:atPlace rdf:resource="http://www.wikidata.org/entity/Q3895664"/>
+        <ontology:atTime rdf:resource="http://localhost/apulian_fauna#2019-03-17"/>
+        <ontology:involved rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <numberOfSightings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numberOfSightings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Silvia_Portarena -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Silvia_Portarena">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#ChiefResearcher"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q1650915"/>
+        <projectLeader rdf:resource="http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia"/>
+        <workOnProject rdf:resource="http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia"/>
+        <workOnZone rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <rdfs:label xml:lang="it">Silvia Portarena</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-01-01 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-01-01">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-01</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-01-04 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-01-04">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-04</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-01-08 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-01-08">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-08</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-01-17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-01-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-17</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-01-20 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-01-20">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-20</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-01-26 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-01-26">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-26</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-02-09 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-02-09">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-09</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-02-13 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-02-13">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-13</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-02-17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-02-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-17</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-02-28 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-02-28">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-28</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-03-02 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-03-02">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-02</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-03-08 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-03-08">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-08</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-03-23 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-03-23">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-23</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-04-08 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-04-08">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-08</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-04-15 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-04-15">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-15</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-06-07 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-06-07">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-07</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-07-07 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-07-07">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-07-07</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-07-10 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-07-10">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-07-10</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-07-13 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-07-13">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-07-13</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-07-18 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-07-18">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-07-18</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-08-03 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-08-03">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-03</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-08-05 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-08-05">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-05</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-08-07 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-08-07">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-07</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-08-11 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-08-11">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-11</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-08-14 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-08-14">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-14</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-08-18 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-08-18">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-18</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-08-31 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-08-31">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-08-31</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-09-08 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-09-08">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-08</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-09-12 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-09-12">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-12</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-09-17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-09-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-17</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-09-27 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-09-27">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-27</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-09-30 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-09-30">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-30</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-10-15 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-10-15">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-15</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-10-17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-10-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-17</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-10-24 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-10-24">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-24</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-10-26 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-10-26">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-26</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-11-10 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-11-10">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-11-10</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-11-17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-11-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-11-17</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-11-18 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-11-18">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-11-18</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-11-27 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-11-27">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-11-27</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-12-11 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-12-11">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-11</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-12-14 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-12-14">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-14</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-12-20 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-12-20">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-20</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-12-26 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-12-26">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-26</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2018-12-30 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2018-12-30">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-30</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-01-05 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-01-05">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-05</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-01-17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-01-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-17</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-02-03 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-02-03">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-03</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-02-17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-02-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-17</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-02-21 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-02-21">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-21</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-02-22 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-02-22">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-22</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-03-13 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-03-13">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-13</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-03-16 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-03-16">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-16</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-03-17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-03-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-17</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-03-21 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-03-21">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-21</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-04-01 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-04-01">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-01</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-04-07 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-04-07">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-07</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-04-11 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-04-11">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-11</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-04-19 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-04-19">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-19</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-04-22 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-04-22">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-22</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-04-29 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-04-29">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-29</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-05-06 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-05-06">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-06</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-05-08 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-05-08">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-08</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-06-15 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-06-15">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-15</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-06-19 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-06-19">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-19</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-06-22 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-06-22">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-22</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-06-25 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-06-25">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-25</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-06-29 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-06-29">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-06-29</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-07-06 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-07-06">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-06</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-07-10 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-07-10">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-10</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-07-14 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-07-14">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-14</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-07-19 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-07-19">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-19</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-07-21 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-07-21">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-21</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-07-30 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-07-30">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-30</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-08-14 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-08-14">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-08-14</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-08-17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-08-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-08-17</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-08-28 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-08-28">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-08-28</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-08-31 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-08-31">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-08-31</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-09-08 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-09-08">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-09-08</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-09-19 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-09-19">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-09-19</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-09-20 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-09-20">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-09-20</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-09-27 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-09-27">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-09-27</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-10-12 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-10-12">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-10-12</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-10-27 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-10-27">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-10-27</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-11-15 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-11-15">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-11-15</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-11-17 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-11-17">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-11-17</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-11-21 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-11-21">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-11-21</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-11-27 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-11-27">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-11-27</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-12-16 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-12-16">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-16</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#2019-12-29 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#2019-12-29">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Istant"/>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-29</time:inXSDDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/apulian_fauna#Progetti_di_copianificazione_del_piano_del_Parco_Nazionale_dell’Alta_Murgia">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna/ResearchProject"/>
+        <placeOfResearch rdf:resource="http://www.wikidata.org/entity/Q680313"/>
+        <subProjectOf rdf:resource="http://localhost/apulian_fauna#Progetto_tutela_biodiversità_dei_parchi_nazionali_pugliesi"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q15872"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q15879"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q188601"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q223044"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q25961"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q26050"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q262307"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q27066"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q539670"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <subjectOfResearch rdf:resource="http://www.wikidata.org/entity/Q858243"/>
+        <startYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</startYear>
+        <rdfs:label xml:lang="it">Progetto tutela biodiversità del Parco Nazionale dell’Alta Murgia</rdfs:label>
+        <rdfs:label xml:lang="en">Project of protection of biodiversity for the Alta Murgia National Park</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q122069 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q122069">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <rdfs:comment xml:lang="en">Is a species of deer. The male of the species is sometimes referred to as a roebuck. The roe deer is relatively small, reddish and grey-brown, and well-adapted to cold environments. The species is widespread in Europe, from the Mediterranean to Scandinavia, from Scotland to the Caucasus, and east to northern Iran and Iraq. It is distinct from the somewhat larger Siberian roe deer.</rdfs:comment>
+        <rdfs:label xml:lang="en">Roe deer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q123991 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q123991">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Land"/>
+        <rdfs:comment xml:lang="en">It is an ecoregion, in the montane grasslands and shrublands and temperate grasslands, savannas and shrublands biomes, characterized by grassland plains without trees apart from those near rivers and lakes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Steppe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q13386 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q13386">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q15089"/>
+        <rdfs:label xml:lang="en">Lecce</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q13464 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q13464">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q15089"/>
+        <rdfs:label xml:lang="en">Foggia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q13496 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q13496">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q15089"/>
+        <rdfs:label xml:lang="en">Brindisi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q13498 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q13498">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q15089"/>
+        <rdfs:label xml:lang="en">Taranto</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q15872 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q15872">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q10811"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Murgia"/>
+        <rdfs:comment xml:lang="en">They are small reptiles, most of these in temperate countries are gray or beige in color, spotted so finely as to resemble rubber. Many species can change color to blend in or for other purposes, adapting for example to the surrounding environment. Other species, characteristic of warm countries, may have bright colors, especially those with mainly diurnal habits. Geckos are the only reptiles in temperate countries with voices, that is, they emit a verse, which is not a hiss.</rdfs:comment>
+        <rdfs:label xml:lang="en">Geco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q15879 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q15879">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q10811"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Murgia"/>
+        <rdfs:comment xml:lang="en">Are squamate reptiles ranging across all continents except Antarctica, as well as most oceanic island chains. The group is paraphyletic as it excludes the snakes and Amphisbaenia; some lizards are more closely related to these two excluded groups than they are to other lizards.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lizard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q16124 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q16124">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q15089"/>
+        <rdfs:label xml:lang="en">Barletta-Andria-Trani</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q165 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q165">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Water"/>
+        <rdfs:comment xml:lang="en">Large body of saline water</rdfs:comment>
+        <rdfs:label xml:lang="en">Sea</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q166735 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q166735">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Habitat"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Land"/>
+        <rdfs:comment xml:lang="en">A swamp is a wetland that is forested. Swamps are considered to be transition zones because both land and water play a role in creating this environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Swamp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q1675166 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q1675166">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#MarineAnimal"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q10908"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Freshwater"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q166735"/>
+        <rdfs:comment xml:lang="en">The Italian newt (Lissotriton italicus) is a species of salamander in the family Salamandridae found only in Italy. Its natural habitats are temperate forests, temperate shrubland, Mediterranean-type shrubby vegetation, freshwater lakes, intermittent freshwater lakes, freshwater marshes, intermittent freshwater marshes, arable land, pastureland, rural gardens, water storage areas, ponds, and canals and ditches. It is threatened by habitat loss. It was formerly known as Triturus italicus, but was relocated to the genus Lissotriton after Triturus was split.</rdfs:comment>
+        <rdfs:label xml:lang="en">Italian newt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q18498 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q18498">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Predator"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <eatAnimal rdf:resource="http://www.wikidata.org/entity/Q243727"/>
+        <eatAnimal rdf:resource="http://www.wikidata.org/entity/Q25311"/>
+        <eatAnimal rdf:resource="http://www.wikidata.org/entity/Q8331"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <rdfs:comment xml:lang="en">Is a canine native to the wilderness and remote areas of Eurasia and North America. It is the largest extant member of its familyThe wolf is the most specialized member of the genus Canis for cooperative big game hunting, as demonstrated by its physical adaptations to tackling large prey, its more social nature, and its highly advanced expressive behaviour.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wolf</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q188601 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q188601">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#MarineAnimal"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q5113"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Freshwater"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q123991"/>
+        <rdfs:comment xml:lang="en">They live in central Europe forests and are more common in hilly areas. They prefer deciduous forests since they like to hide in fallen leaves and around mossy tree trunks. They need small brooks or ponds with clean water in their habitat for the development of the larvae. Whether on land or in water, fire salamanders are inconspicuous. They spend much of their time hidden under wood or other objects. They are active in the evening and the night, but on rainy days they are active in the daytime as well</rdfs:comment>
+        <rdfs:label xml:lang="en">Little bustard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q212552 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q212552">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#MarineAnimal"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q152"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q165"/>
+        <rdfs:comment xml:lang="en">The European conger (Conger conger) is a species of conger of the family Congridae. It is the largest eel in the world and native to the northeast Atlantic, including the Mediterranean Sea.</rdfs:comment>
+        <rdfs:label xml:lang="en">European conger</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q213383 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q213383">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Predator"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q43806"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <eatAnimal rdf:resource="http://www.wikidata.org/entity/Q213383"/>
+        <eatAnimal rdf:resource="http://www.wikidata.org/entity/Q243727"/>
+        <eatenByAnimal rdf:resource="http://www.wikidata.org/entity/Q213383"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Murgia"/>
+        <rdfs:comment xml:lang="en">The tarantula is an invertebrate that relies on an exoskeleton for muscular support. Like other Arachnida, a tarantula’s body comprises two main parts, the prosoma (or cephalothorax) and the opisthosoma (or abdomen). The prosoma and opisthosoma are connected by the pedicel, or pregenital somite. This waist-like connecting piece is actually part of the prosoma and gives the opisthosoma a wide range of motion relative to the prosoma.</rdfs:comment>
+        <rdfs:label xml:lang="en">Theraphosidae</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q217350 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q217350">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q43806"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Murgia"/>
+        <rdfs:comment xml:lang="en">The wheat weevil (Sitophilus granarius), also known as the grain weevil or granary weevil, occurs all over the world and is a common pest in many places. It can cause significant damage to harvested stored grains and may drastically decrease crop yields. The females lay many eggs and the larvae eat the inside of the grain kernels.</rdfs:comment>
+        <rdfs:label xml:lang="en">Wheat weevil</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q223044 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q223044">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#MarineAnimal"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q10811"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Murgia"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q165"/>
+        <rdfs:comment xml:lang="en">Turtles are reptiles of the order Testudines characterized by a special bony or cartilaginous shell developed from their ribs and acting as a shield.</rdfs:comment>
+        <rdfs:label xml:lang="en">Turtle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q243727 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q243727">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q10850"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <eatenByAnimal rdf:resource="http://www.wikidata.org/entity/Q18498"/>
+        <eatenByAnimal rdf:resource="http://www.wikidata.org/entity/Q213383"/>
+        <eatenByAnimal rdf:resource="http://www.wikidata.org/entity/Q27066"/>
+        <eatenByAnimal rdf:resource="http://www.wikidata.org/entity/Q662672"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q123991"/>
+        <rdfs:comment xml:lang="en">Is a European rodent</rdfs:comment>
+        <rdfs:label xml:lang="en">Country mouse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q25311 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q25311">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <eatenByAnimal rdf:resource="http://www.wikidata.org/entity/Q18498"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <rdfs:comment xml:lang="en">Mustela nivalis is the smallest member of the genus Mustela, family Mustelidae and order Carnivora. It is native to Eurasia, North America and North Africa.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mustela nivalis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q25961 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q25961">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q5113"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <eatenByAnimal rdf:resource="http://www.wikidata.org/entity/Q858243"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q123991"/>
+        <rdfs:comment xml:lang="en">Is a passerine bird in the lark family Alaudidae. It is a widespread species found across Europe and Asia with introduced populations in New Zealand, Australia and on the Hawaiian Islands. It is a bird of open farmland and heath, known for the song of the male, which is delivered in hovering flight from heights of 50 to 100 metres (160 to 330 ft). The sexes are alike. It is streaked greyish-brown above and on the breast and has a buff-white belly.</rdfs:comment>
+        <rdfs:label xml:lang="en">Skylark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q26050 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q26050">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q5113"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <rdfs:comment xml:lang="en">They are medium-sized birds (total length between 11.5 and 33 cm); the beak, robust and slightly curved, sometimes equipped with a small hook, has at the base only small and scarce seals. The legs are coated with plates that do not form shields, and are usually more robust and long than those of related species, in relation to the fact that their life takes place on the ground and not on trees.</rdfs:comment>
+        <rdfs:label xml:lang="en">Thrush</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q262307 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q262307">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q123991"/>
+        <rdfs:comment xml:lang="en">The crested porcupine (Hystrix cristata) also known as the African crested porcupine, is a species of rodent in the family Hystricidae[2] found in Italy, North Africa, and sub-Saharan Africa.</rdfs:comment>
+        <rdfs:label xml:lang="en">Crested porcupine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q27066 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q27066">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Predator"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <eatAnimal rdf:resource="http://www.wikidata.org/entity/Q243727"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Murgia"/>
+        <rdfs:comment xml:lang="en">The European badger is a powerfully built black, white, brown and grey animal with a small head, a stocky body, small black eyes and short tail.</rdfs:comment>
+        <rdfs:label xml:lang="en">European badger</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q3519 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q3519">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q15089"/>
+        <rdfs:label xml:lang="en">Bari</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q382227 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q382227">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SecondLevelArea"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q179049"/>
+        <hasHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <subZoneOf rdf:resource="http://www.wikidata.org/entity/Q13464"/>
+        <rdfs:comment xml:lang="en">The Gargano National Park (Italian: Parco nazionale del Gargano) is a national park in the province of Foggia, southern Italy. Aside from the Mount Gargano promontory from which it takes its name, it includes also the Tremiti Islands archipelago and the Foresta Umbra, a large wood protected area established in 1977.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gargano National Park</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q3895664 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q3895664">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SecondLevelArea"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q179049"/>
+        <hasHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <subZoneOf rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <rdfs:comment xml:lang="en">The Lama Balice Regional Nature Park is a 504-hectare protected natural area that was established by the Puglia Region under the regional law No 15/2007 located in the metropolitan city of Bari.</rdfs:comment>
+        <rdfs:label xml:lang="en">Regional natural park of Lama Balice</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q3936925 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q3936925">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SecondLevelArea"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q179049"/>
+        <hasHabitat rdf:resource="http://localhost/apulian_fauna#Beach"/>
+        <hasHabitat rdf:resource="http://www.wikidata.org/entity/Q123991"/>
+        <hasHabitat rdf:resource="http://www.wikidata.org/entity/Q165"/>
+        <subZoneOf rdf:resource="http://www.wikidata.org/entity/Q13496"/>
+        <rdfs:comment xml:lang="en">The Torre Guaceto State Nature Reserve is a state nature reserve located on the Adriatic coast of high Salento, a few kilometers from the centers of Carovigno and San Vito dei Normanni and 17 km from Brindisi.</rdfs:comment>
+        <rdfs:label xml:lang="en">Protected marine area of Torre Guaceto</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q539670 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q539670">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q10850"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q166735"/>
+        <rdfs:comment xml:lang="en">The European water vole or northern water vole (Arvicola amphibius, included in synonymy: A. terrestris), is a semi-aquatic rodent. It is often informally called the water rat, though it only superficially resembles a true rat.[3] Water voles have rounder noses than rats, deep brown fur, chubby faces and short fuzzy ears; unlike rats their tails, paws and ears are covered with hair.
+In the wild, on average, water voles only live about five months. Maximum longevity in captivity is two and a half years.</rdfs:comment>
+        <rdfs:label xml:lang="en">Arvicola</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q550195 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q550195">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#MarineAnimal"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q152"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q165"/>
+        <rdfs:comment xml:lang="en">The grouper (Epinephelus aeneus) is a species of grouper living in the subtropical eastern Atlantic Ocean and the southern Mediterranean Sea. It can reach a maximum length of 120 cm and a maximum weight of 25 kg.</rdfs:comment>
+        <rdfs:label xml:lang="en">Grouper</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q58697 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q58697">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Predator"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <eatAnimal rdf:resource="http://www.wikidata.org/entity/Q662672"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q123991"/>
+        <rdfs:comment xml:lang="en">Is a suid native to much of Eurasia, North Africa, and the Greater Sunda Islands. Human intervention has spread its distribution further, making the species one of the widest-ranging mammals in the world, as well as the most widely spread suiform. Its wide range, high numbers, and adaptability mean that it is classed as least concern by the IUCNand it has become an invasive species in part of its introduced range. The animal probably originated in Southeast Asia during the Early Pleistocene, and outcompeted other suid species as it spread throughout the Old World.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sus scrofa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q618192 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q618192">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q10908"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q123991"/>
+        <rdfs:comment xml:lang="en">The Apennine yellow-bellied toad (Bombina pachypus) is a species of toad in the family Bombinatoridae endemic to Italy. Its natural habitats are temperate forests, temperate grassland, swamps, freshwater marshes, intermittent freshwater marshes, arable land, pastureland, ponds, open excavations, irrigated land, and seasonally flooded agricultural land. It is threatened by habitat loss.</rdfs:comment>
+        <rdfs:label xml:lang="en">Appenine yellow-bellied toad</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q650143 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q650143">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Murgia"/>
+        <rdfs:comment xml:lang="en">Talpa is a genus in the mole family Talpidae. Among the first taxa in science, Carolus Linnaeus used the Latin word for &quot;moles&quot;, talpa, in his Regnum Animale to refer to the commonly known European form of mole.</rdfs:comment>
+        <rdfs:label xml:lang="en">Talpa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q662672 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q662672">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Predator"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q10811"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <eatAnimal rdf:resource="http://www.wikidata.org/entity/Q243727"/>
+        <eatenByAnimal rdf:resource="http://www.wikidata.org/entity/Q58697"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <rdfs:comment xml:lang="en">Vipera is a genus of venomous vipers. It has a very wide range, being found from North Africa to just within the Arctic Circle and from Great Britain to Pacific Asia.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vipera</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q680313 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q680313">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Area"/>
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#SecondLevelArea"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q179049"/>
+        <hasHabitat rdf:resource="http://localhost/apulian_fauna#Murgia"/>
+        <subZoneOf rdf:resource="http://www.wikidata.org/entity/Q16124"/>
+        <subZoneOf rdf:resource="http://www.wikidata.org/entity/Q3519"/>
+        <rdfs:comment xml:lang="en">The Parco Nazionale dell&apos;Alta Murgia is a national park in Apulia, southern Italy, established in 2004. It lies in the Murgia geographical area, with its headquarters in the town of Gravina in Puglia, and has an area of 677.39  square kilometres.</rdfs:comment>
+        <rdfs:label xml:lang="en">Alta Murgia National Park</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q79915 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q79915">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#MarineAnimal"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q5113"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Freshwater"/>
+        <preferredHabitat rdf:resource="http://www.wikidata.org/entity/Q166735"/>
+        <rdfs:comment xml:lang="en">The common kingfisher (Alcedo atthis) also known as the Eurasian kingfisher, and river kingfisher, is a small kingfisher with seven subspecies recognized within its wide distribution across Eurasia and North Africa. It is resident in much of its range, but migrates from areas where rivers freeze in winter.</rdfs:comment>
+        <rdfs:label xml:lang="en">Common kingfisher</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q8331 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q8331">
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <eatenByAnimal rdf:resource="http://www.wikidata.org/entity/Q18498"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <rdfs:comment xml:lang="en">The fox is a medium-sized canine, has a long and tapered muzzle, straight, pointed and black ears in the back and short legs. Its appearance is pleasant, its thick fur is long, the soft tail and the color of the hair can change with the seasons.
+It is a nocturnal animal, but it also lives undisturbed during the day, sheltering under the bushes, in small ditches, in the burrows dug by itself or in abandoned badgers or porcupines&apos; dens.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fox</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q858243 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q858243">
+        <rdf:type rdf:resource="http://localhost/apulian_fauna#Predator"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q10850"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q25241"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q729"/>
+        <rdf:type rdf:resource="http://www.wikidata.org/entity/Q7377"/>
+        <eatAnimal rdf:resource="http://www.wikidata.org/entity/Q25961"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Forest"/>
+        <preferredHabitat rdf:resource="http://localhost/apulian_fauna#Murgia"/>
+        <rdfs:comment xml:lang="en">Are members of the family Sciuridae, a family that includes small or medium-size rodents. The squirrel family includes tree squirrels, ground squirrels, chipmunks, marmots (including groundhogs), flying squirrels, and prairie dogs amongst other rodents.</rdfs:comment>
+        <rdfs:label xml:lang="en">Squirrel</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

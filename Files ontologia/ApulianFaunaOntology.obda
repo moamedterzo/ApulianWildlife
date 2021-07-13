@@ -1,0 +1,29 @@
+[PrefixDeclaration]
+:		http://localhost/apulian_fauna#
+dc:		http://purl.org/dc/elements/1.1/
+wd:		http://www.wikidata.org/entity/
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+lode:		http://linkedevents.org/ontology/
+obda:		https://w3id.org/obda/vocabulary#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+time:		http://www.w3.org/2006/time#
+vann:		http://purl.org/vocab/vann/
+
+[MappingDeclaration] @collection [[
+mappingId	mapping--ImportDates
+target		:{Data} time:inXSDDate {Data}^^xsd:date . 
+source		select distinct Data
+			from Sighting
+
+mappingId	mapping-ImportSightings
+target		:Sighting_{ReferenceID} a :Sighting ; lode:involved wd:{Animal} ; lode:atTime :{Data} ; lode:atPlace wd:{Area} ; :numberOfSightings {NumberOfSightings}^^xsd:integer . 
+source		select ReferenceID, NumberOfSightings, Data,
+			an.WikidataReference as Animal, ar.WikidataReference as Area
+			from Sighting s
+			inner join Area ar on s.IDArea = ar.ID
+			inner join Animal an on s.IDAnimal = an.ID
+]]
+
